@@ -10,8 +10,8 @@ const HeaderNav = styled.div`
   background-color: black;
 
   nav {
-    padding-left: 120px;
-    padding-right: 120px;
+    /* padding-left: 120px;
+    padding-right: 120px; */
     /* background-color: black; */
   }
 
