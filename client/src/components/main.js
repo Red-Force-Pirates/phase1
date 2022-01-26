@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-// import realman from '../assets/img/realman.png'
+import main from '../assets/img/main.png'
 import styled from 'styled-components';
 
 
@@ -9,11 +9,10 @@ const MainStory = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    /* height: 100vh; */
     position: relative;
-    background-color: black;
-    padding-left: 120px;
-    padding-right: 120px;
+    background-color: darkgray;
   }
   .container22{
       width: 80%;
@@ -77,6 +76,9 @@ const MainStory = styled.div`
   }
   font-family: 'Roboto', sans-serif;
 
+  .mainImg {
+    width: 100%;
+  }
 `;
 
 
@@ -122,7 +124,7 @@ function Home() {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
               <div className='container11'>
- 
+                <img className="mainImg" alt="main" src={main}></img>
               </div>
               
               
