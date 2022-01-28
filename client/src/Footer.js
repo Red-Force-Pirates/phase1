@@ -7,8 +7,10 @@ const Foot = styled.div`
     padding-left: 10%;
     padding-right: 10%;
     
+    background-color: black;
+
     .footer {
-        /* background-color: lightgray; */
+        background-color: black;
         height: 75px;
         vertical-align: middle;
         display: flex;
@@ -22,17 +24,17 @@ const Foot = styled.div`
 
     .footer a {
         text-decoration: none;
-        color: gray;
+        color: white;
     }
 
     .footer a:link{
         text-decoration: none;
-        color: gray;
+        color: white;
     }
     
     .footer a:visited{
         text-decoration: none;
-        color: gray;
+        color: white;
     }
 
     .footer-ico{

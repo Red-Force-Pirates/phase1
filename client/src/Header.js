@@ -7,40 +7,44 @@ import { useEffect, useState } from 'react';
 
 const HeaderNav = styled.div`
 
+  background-color: black;
+
   nav {
+    padding-top: 40px;
     padding-left: 120px;
     padding-right: 120px;
+    /* background-color: black; */
   }
 
   ul {
     display: flex;
-    height: 48px;
     justify-content: space-around;
     align-items: center;
+    /* background-color: black; */
   }
 
   li {
-      background-color: white;
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-around;
       font-size: 24px;
-      padding-top: 12px;
+      /* padding-top: 12px; */
+      /* background-color: black; */
   }
 
-  li:hover {
+  /* li:hover {
       background-color: #070b4a;
       transform: scale(1.1);
       transition: all 0.1s linear;
       p {
         color: white;
       }
-  }
+  } */
 
   p {
-    color: #070b4a;
+    color: white;
   }
 
   /* 밑줄 제거 */
