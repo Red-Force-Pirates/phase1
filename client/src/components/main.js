@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import realman from '../assets/img/realman.png'
+import main from '../assets/img/main.png'
 import styled from 'styled-components';
 
 
@@ -9,12 +9,10 @@ const MainStory = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    /* height: 100vh; */
     position: relative;
-    /* background-color: mediumaquamarine; */
-    padding-left: 120px;
-    padding-right: 120px;
-
+    background-color: black;
   }
   .container22{
       width: 80%;
@@ -78,6 +76,9 @@ const MainStory = styled.div`
   }
   font-family: 'Roboto', sans-serif;
 
+  .mainImg {
+    width: 80%;
+  }
 `;
 
 
@@ -123,71 +124,7 @@ function Home() {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
               <div className='container11'>
-                      <div className='containerbutton' >
-                          <div className="Image" onClick={openModal1}>
-                              <img src={realman} width="100%" height="100%" />
-                              
-                          </div>
-                          <div className='containertext'>
-                              Home_T
-                          </div>
-                      </div>
-
-                  {/* 크로스핏 */}
-                  <div className='containerbutton' >
-                      <div className="Image" onClick={openModal2}>
-                          <img src={require('../assets/img/CrossfitMain.png')} width="100%" height="100%" />
-                          
-                      </div>
-                      <div className='containertext'>
-                          Crossfit
-                      </div>
-                  </div>
-
-                  {/* sport */}
-                  <div className='containerbutton' >
-                      <div className="Image" onClick={openModal3}>
-                          <img src={require('../assets/img/SportMain.png')} width="100%" height="100%" />
-                          
-                      </div>
-                      <div className='containertext'>
-                          Sport
-                      </div>
-                  </div>
-
-
-                  {/* climbing */}
-                  <div className='containerbutton' >
-                      <div className="Image" onClick={openModal4}>
-                          <img src={require('../assets/img/climbing1.png')} width="100%" height="100%" />
-                          
-                      </div>
-                      <div className='containertext'>
-                      Climbing
-                      </div>
-                  </div>
-                  
-                  {/* hiking */}
-                  <div className='containerbutton' >
-                      <div className="Image" onClick={openModal5}>
-                          <img src={require('../assets/img/hiking1.png')} width="100%" height="100%" />
-                          
-                      </div>
-                      <div className='containertext'>
-                          Hiking
-                      </div>
-                  </div>
-
-                  {/* lesure */}
-                  <div className='containerbutton' >
-                      <div className="Image" onClick={openModal6}>
-                          <img src={require('../assets/img/leisure1.png')} width="100%" height="100%" />
-                          
-                      </div>
-                      <div className='containertext'>
-                          Leisure
-                      </div>
-                  </div>
+                <img className="mainImg" alt="main" src={main}></img>
               </div>
               
               
