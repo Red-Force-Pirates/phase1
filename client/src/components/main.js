@@ -12,7 +12,7 @@ const MainStory = styled.div`
     width: 100%;
     /* height: 100vh; */
     position: relative;
-    background-color: darkgray;
+    background-color: black;
   }
   .container22{
       width: 80%;
@@ -77,7 +77,7 @@ const MainStory = styled.div`
   font-family: 'Roboto', sans-serif;
 
   .mainImg {
-    width: 100%;
+    width: 80%;
   }
 `;
 
