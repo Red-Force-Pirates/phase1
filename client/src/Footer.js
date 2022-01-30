@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import fav from '../src/assets/img/fav.ico'
+import twit from "../src/assets/img/twit.png"
+import disc from "../src/assets/img/disc.png"
+import inst from "../src/assets/img/inst.png"
+import tele from "../src/assets/img/tele.png"
 
 const Foot = styled.div`
     
@@ -9,6 +12,7 @@ const Foot = styled.div`
     
     background-color: black;
 
+    /* fContainer1 */
     .fContainer {
         background-color: black;
         vertical-align: middle;
@@ -43,12 +47,30 @@ const Foot = styled.div`
         display: flex;
     }
     
+    /* LEFT */
     .fContainer_left_content {
-        margin-right: 20px;
+        margin-right: 40px;
     }
 
-    .footer-logo{
-        /* margin-right: auto; */
+    /* RIGHT */
+    .imgSection {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .snsText{
+        text-align: right;
+    }
+
+    .img_box {
+        padding-top: 20%;
+        /* margin-right: 20%; */
+        padding-left: 20%;
+    }
+
+    .sns_logo{
+        width: 36px;
+        height: 36px;
     }
 
 
@@ -96,12 +118,27 @@ const Footer = () => (
             </div>
             <div className="fContainer_right">
                 <div className="fContainer_right_content">
-                    Join the COMMUNITY
+                    <div className="snsText">Join the COMMUNITY</div>
+                    <div className="imgSection">
+                        <div className="img_box">
+                            <a href="https://google.com" target="blank"><img alt="twit" className="sns_logo" src={twit}></img></a>
+                        </div>
+                        <div className="img_box">
+                            <a href="https://google.com" target="blank"><img alt="disc" className="sns_logo" src={disc}></img></a>
+                        </div>
+                        <div className="img_box">
+                            <a href="https://google.com" target="blank"><img alt="inst" className="sns_logo" src={inst}></img></a>
+                        </div>
+                        <div className="img_box">
+                            <a href="https://google.com" target="blank"><img alt="tele" className="sns_logo" src={tele}></img></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div className="fContainer">
-            <div className="footer-logo"><a href='/'>2018 - 2021 PIRATES DAO</a></div>
+            <div className="footer-logo">2018 - 2021 PIRATES DAO</div>
+            <div className="footer-logo">INC PRIVACY POLICY TERMS OF SERVICE</div>
         </div>
     </Foot>
 
