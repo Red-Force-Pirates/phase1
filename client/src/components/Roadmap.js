@@ -1,42 +1,43 @@
 import React from 'react';
-import main from '../assets/img/main.png'
+import roadmap from '../assets/img/roadmap.png'
 import styled from 'styled-components';
 
-
-const MainStory = styled.div`
-  
-  .container{
+const RoadmapStyle = styled.div`
+   .container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 600px;
     position: relative;
     background-color: black;
   }
 
-  .mainImg {
+  .mainContents {
     width: 80%;
+    height: 100%;
+    background-image: url(${roadmap});
   }
-`;
 
+`
 
-
-function Home() {
-  return (
-    <>
-      <MainStory >
+function Roadmap() {
+    return (
+      <>
+        <RoadmapStyle >
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-            <div className='container'>
-              <img className="mainImg" alt="main" src={main}></img>
+            <div className="container">
+              <div className="mainContents">
+              </div>
             </div>
-      </MainStory>
-    </>
-  );
-}
-
-
-
-
-export default Home;
+        </RoadmapStyle>
+      </>
+    );
+  }
+  
+  
+  
+  
+  export default Roadmap;
