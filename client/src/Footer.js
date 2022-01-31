@@ -91,30 +91,30 @@ const Footer = () => (
             <div className="fContainer_left">
                 <div className="fContainer_left_content">
                     PIRATES DAO.<br />
-                    THE KLAYTN NETWORK'S FIRST<br />
-                    COMMUNITY FOR COLLECTIBLES<br />
+                    THE KLAYTN NETWORK'S FIRST
+                    COMMUNITY FOR COLLECTIBLES
                     AND NON-FUNGIBLE TOKEN TRADERS.<br />
                     SHARE YOUR JOY WITH GREAT PIRATES<br />
                 </div>
-                <div className="fContainer_left_content">
+                {/* <div className="fContainer_left_content">
                     <a href='/'>SUGGESTIONS</a><br />
                     <a href='/'>DISCORD COMMUNITY</a><br />
                     <a href='/'>BLOG</a><br />
                     <a href='/'>DOCS</a><br />
                     <a href='/'>NEWSLETTER</a>
-                </div>
-                <div className="fContainer_left_content">
+                </div> */}
+                {/* <div className="fContainer_left_content">
                     <a href='/'>RESOURCES</a><br />
                     <a href='/'>HELP CENTER</a><br />
                     <a href='/'>PLATFORM STATUS</a><br />
                     <a href='/'>PARTNERS</a><br />
                     <a href='/'>GAS-FREE MARKETPLACE</a>
-                </div>
-                <div className="fContainer_left_content">
+                </div> */}
+                {/* <div className="fContainer_left_content">
                     <a href='/'>COMPANY</a><br />
                     <a href='/'>ABOUT</a><br />
                     <a href='/'>CAREERS</a><br />
-                </div>
+                </div> */}
             </div>
             <div className="fContainer_right">
                 <div className="fContainer_right_content">
