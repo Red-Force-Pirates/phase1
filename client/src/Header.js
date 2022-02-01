@@ -62,6 +62,14 @@ const HeaderNav = styled.div`
     display: flex;
     width: 48px;
   }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+      /* https://codepen.io/maximakymenko/pen/aboWJpX?editors=0110 */
+      /* ul {
+        display: none;
+      } */
+  }
 `
 
 

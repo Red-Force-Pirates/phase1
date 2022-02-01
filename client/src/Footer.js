@@ -79,6 +79,11 @@ const Foot = styled.div`
     font-family: 'Roboto', sans-serif;
     font-family: 'Rock Salt', cursive;
     font-family: 'Walter Turncoat', cursive;
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+        
+    }
 `
 
 const Footer = () => (
