@@ -53,7 +53,7 @@ const HeaderNav = styled.div`
   }
 
   /* ================= 햄버거 ================= */
-  .StyledBurger {
+  .Burger {
     position: absolute;
     right: 10%;
     display: none;
@@ -68,8 +68,17 @@ const HeaderNav = styled.div`
     z-index: 10;
   }
   
+  /* 사이드 모달 */
+  .sideOpen {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+  }
 
-
+  .sideClose {
+    display: none;
+  }
 
   /* 반응형 */
   @media (max-width: 768px) {
@@ -79,7 +88,7 @@ const HeaderNav = styled.div`
       li {
         display: none;
       }
-      .StyledBurger {
+      .Burger {
         display: flex;
         background-color: white;
       }
@@ -90,6 +99,10 @@ const HeaderNav = styled.div`
 
 
 const Header = () => {
+    // 햄버거메뉴 상태관리
+    const [click, setClick] = React.useState(false);
+    const handleClick = () => setClick(!click);
+    const Close = () => setClick(false);
 
     return (
         <>
@@ -106,7 +119,11 @@ const Header = () => {
                 <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li>
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
                 <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li>
-                <button className="StyledBurger"></button>
+                <button onClick={handleClick} className="Burger"></button>
+                {/* 사이드모달 */}
+                <div className={click ? "sideOpen" : "sideClose"}>
+                  test
+                </div>
               </ul>
             </nav>
           </HeaderNav>

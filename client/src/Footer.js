@@ -64,7 +64,7 @@ const Foot = styled.div`
     }
 
     .img_box {
-        padding-top: 20%;
+        padding-top: 10%;
         /* margin-right: 20%; */
         padding-left: 20%;
     }
@@ -133,7 +133,7 @@ const Footer = () => (
                             <a href="https://discord.com/invite/Nd6xU3bN" target="blank"><img alt="disc" className="sns_logo" src={disc}></img></a>
                         </div>
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="inst" className="sns_logo" src={inst}></img></a>
+                            <a href="https://www.instagram.com/piratesdao/" target="blank"><img alt="inst" className="sns_logo" src={inst}></img></a>
                         </div>
                         <div className="img_box">
                             <a href="https://t.me/piratesdao" target="blank"><img alt="tele" className="sns_logo" src={tele}></img></a>
