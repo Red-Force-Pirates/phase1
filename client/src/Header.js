@@ -77,10 +77,13 @@ const HeaderNav = styled.div`
   
   /* 사이드 모달 */
   .sideOpen {
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: white;
+    display: none;
+    width: 20%;
+    height: 100%;
+    background-color: gray;
+    position: absolute;
+    right: 10%;
+    z-index: 10;
   }
 
   .sideClose {
@@ -100,6 +103,9 @@ const HeaderNav = styled.div`
         background-color: black;
       }
 
+      .sideOpen{
+        display: block;
+      }
   }
 `
 
@@ -133,7 +139,7 @@ const Header = () => {
                 </button>
                 {/* 사이드모달 */}
                 <div className={click ? "sideOpen" : "sideClose"}>
-                  test
+
                 </div>
               </ul>
             </nav>
