@@ -4,6 +4,7 @@ import twit from "../src/assets/img/twit.png"
 import disc from "../src/assets/img/disc.png"
 import inst from "../src/assets/img/inst.png"
 import tele from "../src/assets/img/tele.png"
+import kakao from "../src/assets/img/kakao.png"
 
 const Foot = styled.div`
     
@@ -126,16 +127,19 @@ const Footer = () => (
                     <div className="snsText">Join the COMMUNITY</div>
                     <div className="imgSection">
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="twit" className="sns_logo" src={twit}></img></a>
+                            <a href="https://twitter.com/DaoPirates" target="blank"><img alt="twit" className="sns_logo" src={twit}></img></a>
                         </div>
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="disc" className="sns_logo" src={disc}></img></a>
+                            <a href="https://discord.com/invite/Nd6xU3bN" target="blank"><img alt="disc" className="sns_logo" src={disc}></img></a>
                         </div>
                         <div className="img_box">
                             <a href="https://google.com" target="blank"><img alt="inst" className="sns_logo" src={inst}></img></a>
                         </div>
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="tele" className="sns_logo" src={tele}></img></a>
+                            <a href="https://t.me/piratesdao" target="blank"><img alt="tele" className="sns_logo" src={tele}></img></a>
+                        </div>
+                        <div className="img_box">
+                            <a href="https://open.kakao.com/o/gzAIhHXd" target="blank"><img alt="kakao" className="sns_logo" src={kakao}></img></a>
                         </div>
                     </div>
                 </div>

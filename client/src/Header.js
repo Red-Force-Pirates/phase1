@@ -30,18 +30,7 @@ const HeaderNav = styled.div`
       align-items: center;
       justify-content: space-around;
       font-size: 12px;
-      /* padding-top: 12px; */
-      /* background-color: black; */
   }
-
-  /* li:hover {
-      background-color: #070b4a;
-      transform: scale(1.1);
-      transition: all 0.1s linear;
-      p {
-        color: white;
-      }
-  } */
 
   p {
     color: white;
@@ -63,35 +52,45 @@ const HeaderNav = styled.div`
     width: 48px;
   }
 
+  /* ================= 햄버거 ================= */
+  .StyledBurger {
+    position: absolute;
+    right: 10%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+  
+
+
+
   /* 반응형 */
   @media (max-width: 768px) {
+      /* https://codesandbox.io/s/github/sidbentifraouine/react-responsive-animated-header?file=/src/components/Header.js */
+      /* https://codepen.io/codebucks27/details/yLMvOPX */
       /* https://codepen.io/maximakymenko/pen/aboWJpX?editors=0110 */
-      /* ul {
+      li {
         display: none;
-      } */
+      }
+      .StyledBurger {
+        display: flex;
+        background-color: white;
+      }
+
   }
 `
 
 
 
 const Header = () => {
-    // 로그인 상태 관리
-    const [isLogin, setIsLogin] = useState(false)
 
-    useEffect(() => {
-      if(sessionStorage.getItem('user_id') === null){
-        // sessionStorage 에 user_id 라는 key 값으로 저장된 값이 없다면
-          console.log('isLogin ? :: ', isLogin)
-      } else {
-      // sessionStorage 에 user_id 라는 key 값으로 저장된 값이 있다면
-      // 로그인 상태 변경
-        setIsLogin(true)
-        console.log('isLogin ? :: ', isLogin)
-      }
-    })
-
-    // 로그인 상태 -> Logout탭 노출, 비로그인 상태 -> Login 탭 노출
-    
     return (
         <>
           <HeaderNav>
@@ -107,8 +106,7 @@ const Header = () => {
                 <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li>
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
                 <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li>
-                {/* <li style={ isLogin ? { display: 'none' } : { display: 'inline-flex' }}><NavLink to="/login" ><p>Login</p></NavLink></li>
-                <li style={ isLogin ? { display: 'inline-flex' } : { display: 'none' }}><NavLink to="/logout" ><p>Logout</p></NavLink></li> */}
+                <button className="StyledBurger"></button>
               </ul>
             </nav>
           </HeaderNav>
