@@ -81,7 +81,7 @@ const HeaderNav = styled.div`
     display: none;
     width: 160px;
     height: 100%;
-    background-color: gray;
+    background-color: black;
     position: fixed;
     right: 0%;
     z-index: 5;
@@ -93,7 +93,18 @@ const HeaderNav = styled.div`
   .sideClose {
     display: none;
   }
+  
   /* 사이드네비바 X버튼 */
+  .exitBtn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    background-color: rgba( 255, 255, 255, 0 );
+    border: none;
+    top: 0;
+    cursor: pointer;
+  }
+
   .exitBtn1 {
     width: 1.6rem;
     height: 0.2rem;
@@ -118,18 +129,19 @@ const HeaderNav = styled.div`
   }
   /* 사이드네비바 내부 */
   .sideUl {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     position: fixed;
     top: 40px;
     right: 20px;
     width: 100px;
     height: 200px;
+    display: block;
   }
 
   .sideList {
-    background-color: red;
+    /* background-color: red; */
     width: 100px;
-    height: 100px;
+    height: 20%;
   }
 
   /* 반응형 */
@@ -159,7 +171,7 @@ const Header = () => {
     // 햄버거메뉴 상태관리
     const [click, setClick] = React.useState(false);
     const handleClick = () => setClick(!click);
-    const Close = () => setClick(false);
+    // const Close = () => setClick(false);
 
     return (
         <>
@@ -185,13 +197,14 @@ const Header = () => {
                 </button>
                 {/* 사이드모달 */}
                 <div className={click ? "sideOpen" : "sideClose"}>
-                  <button onClick={handleClick}>
+                  <button className="exitBtn" onClick={handleClick}>
                     <div className="exitBtn1"></div>
                     <div className="exitBtn2"></div>
                   </button>
                   <ul className="sideUl">
-                    <div className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
-                    <div className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/vault" ><p>VAULT</p></NavLink></div>
                   </ul>
                 </div>
               </ul>
