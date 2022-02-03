@@ -171,7 +171,7 @@ const Header = () => {
     // 햄버거메뉴 상태관리
     const [click, setClick] = React.useState(false);
     const handleClick = () => setClick(!click);
-    // const Close = () => setClick(false);
+    const sideClose = () => setClick(false);
 
     return (
         <>
@@ -181,7 +181,7 @@ const Header = () => {
             <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Roboto:wght@900&family=Rock+Salt&display=swap" rel="stylesheet" />
             <nav>
               <ul>
-                <NavLink to="/" ><img alt="test" className="LogoImg" src={logo}/></NavLink>
+                <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
                 <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
                 <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
                 <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li>
