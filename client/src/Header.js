@@ -21,6 +21,7 @@ const HeaderNav = styled.div`
     justify-content: space-around;
     align-items: center;
     /* background-color: black; */
+    /* position: relative; */
   }
 
   li {
@@ -78,16 +79,57 @@ const HeaderNav = styled.div`
   /* 사이드 모달 */
   .sideOpen {
     display: none;
-    width: 20%;
+    width: 160px;
     height: 100%;
     background-color: gray;
-    position: absolute;
-    right: 10%;
-    z-index: 10;
+    position: fixed;
+    right: 0%;
+    z-index: 5;
+  }
+  .sideOpen.active {
+    display: none;
   }
 
   .sideClose {
     display: none;
+  }
+  /* 사이드네비바 X버튼 */
+  .exitBtn1 {
+    width: 1.6rem;
+    height: 0.2rem;
+    background-color: white;
+    border-radius: 2px;
+    position: fixed;
+    right: 128px;
+    top: 16px;
+    transform-origin : bottom;
+    transform: rotate(45deg);
+  }
+  .exitBtn2 {
+    width: 1.6rem;
+    height: 0.2rem;
+    background-color: white;
+    border-radius: 2px;
+    position: fixed;
+    right: 128px;
+    top: 14px;
+    transform-origin : bottom;
+    transform: rotate(135deg);
+  }
+  /* 사이드네비바 내부 */
+  .sideUl {
+    background-color: cadetblue;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    width: 100px;
+    height: 200px;
+  }
+
+  .sideList {
+    background-color: red;
+    width: 100px;
+    height: 100px;
   }
 
   /* 반응형 */
@@ -95,6 +137,8 @@ const HeaderNav = styled.div`
       /* https://codesandbox.io/s/github/sidbentifraouine/react-responsive-animated-header?file=/src/components/Header.js */
       /* https://codepen.io/codebucks27/details/yLMvOPX */
       /* https://codepen.io/maximakymenko/pen/aboWJpX?editors=0110 */
+      /* https://kutar37.tistory.com/entry/%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94-%EC%99%B8%EB%B6%80%ED%81%B4%EB%A6%AD%EC%8B%9C-%EC%88%A8%EA%B8%B0%EA%B8%B0 */
+
       li {
         display: none;
       }
@@ -132,6 +176,8 @@ const Header = () => {
                 <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li>
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
                 <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li>
+                <li><NavLink to="/item" ><p>ITEM</p></NavLink></li>
+                {/* 햄버거메뉴 */}
                 <button onClick={handleClick} className="Burger">
                   <div className="line"></div>
                   <div className="line"></div>
@@ -139,7 +185,14 @@ const Header = () => {
                 </button>
                 {/* 사이드모달 */}
                 <div className={click ? "sideOpen" : "sideClose"}>
-
+                  <button onClick={handleClick}>
+                    <div className="exitBtn1"></div>
+                    <div className="exitBtn2"></div>
+                  </button>
+                  <ul className="sideUl">
+                    <div className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
+                    <div className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
+                  </ul>
                 </div>
               </ul>
             </nav>
