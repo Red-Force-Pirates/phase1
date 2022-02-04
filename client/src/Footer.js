@@ -57,6 +57,9 @@ const Foot = styled.div`
     .imgSection {
         display: flex;
         justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        
     }
 
     .snsText{
@@ -64,9 +67,8 @@ const Foot = styled.div`
     }
 
     .img_box {
-        padding-top: 10%;
-        /* margin-right: 20%; */
-        padding-left: 20%;
+        padding-top: 5%;
+        padding-left: 20px;
     }
 
     .sns_logo{
@@ -83,7 +85,9 @@ const Foot = styled.div`
 
     /* 반응형 */
     @media (max-width: 768px) {
-        
+        .fContainer {
+            display: block;
+        }
     }
 `
 
