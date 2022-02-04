@@ -30,7 +30,7 @@ const HeaderNav = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-around;
-      font-size: 12px;
+      font-size: 16px;
   }
 
   p {
@@ -184,11 +184,11 @@ const Header = () => {
                 <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
                 <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
                 <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
-                <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li>
-                <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li>
+                {/* <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li> */}
+                {/* <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li> */}
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
-                <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li>
-                <li><NavLink to="/item" ><p>ITEM</p></NavLink></li>
+                {/* <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li> */}
+                {/* <li><NavLink to="/item" ><p>ITEM</p></NavLink></li> */}
                 {/* 햄버거메뉴 */}
                 <button onClick={handleClick} className="Burger">
                   <div className="line"></div>

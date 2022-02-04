@@ -150,7 +150,7 @@ const Footer = () => (
             </div>
         </div>
         <div className="fContainer">
-            <div className="footer-logo">2018 - 2021 PIRATES DAO</div>
+            <div className="footer-logo">2021 - 2022 PIRATES DAO</div>
             <div className="footer-logo">INC PRIVACY POLICY TERMS OF SERVICE</div>
         </div>
     </Foot>
