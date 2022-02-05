@@ -98,7 +98,7 @@ const Header = () => {
                 <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li>
                 <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li>
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
-                <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li>
+                <li><NavLink to="/tavern/page/1" ><p>TAVERN</p></NavLink></li>
                 {/* <li style={ isLogin ? { display: 'none' } : { display: 'inline-flex' }}><NavLink to="/login" ><p>Login</p></NavLink></li>
                 <li style={ isLogin ? { display: 'inline-flex' } : { display: 'none' }}><NavLink to="/logout" ><p>Logout</p></NavLink></li> */}
               </ul>
