@@ -5,6 +5,16 @@ import styled from 'styled-components';
 
 const MainStory = styled.div`
   
+  .phase_v {
+    position: absolute;
+    top: 10;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Rock Salt', cursive;
+  }
+
   .container{
     display: flex;
     justify-content: center;
@@ -17,6 +27,13 @@ const MainStory = styled.div`
   .mainImg {
     width: 80%;
   }
+  
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .phase_v {
+      font-size: 40px;
+    }
+  }
 `;
 
 
@@ -28,7 +45,8 @@ function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-            <div className='container'>
+            <div className="container">
+              <div className="phase_v">Phase 0.</div>
               <img className="mainImg" alt="main" src={main}></img>
             </div>
       </MainStory>
