@@ -1,6 +1,7 @@
 import "./assets/css/App.css";
 import { Routes, Route } from 'react-router-dom';
 import { Main, Login, Logout, Register, Roadmap } from './components/export';
+import Tavern from './components/route_tavern';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/logout" element={<Logout />}/>
         <Route path="/register" element={<Register />}/>
       </Routes>
+      <Tavern />
     </>
   );
 }
