@@ -12,20 +12,42 @@ const RoadmapStyle = styled.div`
     align-items: center;
     width: 100%;
     position: relative;
-    /* background-color: black; */
   }
 
   .mainImg_roadmap {
     width: 80%;
   }
 
+  /* 캐러셀 */
   .phase_carousel {
     position: absolute;
     width: 80%;
     height: 100%;
-    /* background-color: gray; */
     top: 0;
     color: white;
+  }
+
+  /* 배경 불투명처리 */
+  .phase_carousel::before {
+    content:"";
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .roadmap_slider {
+    /* background-color: darkgreen; */
+    height: 100%;
+  }
+
+
+  .phase_head {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
   }
 `
 
@@ -45,30 +67,46 @@ function Roadmap() {
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
           <div className="container_roadmap">
             <div className="phase_carousel">
-              <div>
-                test
-                <h2> Single Item</h2>
-                <Slider {...settings}>
+                <Slider {...settings} className="roadmap_slider">
                   <div>
-                    <h3>1</h3>
+                    <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
+                    <div>페이즈 0는 해적단의 출항을 의미합니다. </div>
+                    <button>test</button>
+                    <div>test1</div>
+                    <div>test1</div>
                   </div>
                   <div>
                     <h3>2</h3>
+                    <div>test2</div>
+                    <div>test2</div>
+                    <div>test2</div>
                   </div>
                   <div>
                     <h3>3</h3>
+                    <div>test3</div>
+                    <div>test3</div>
+                    <div>test3</div>
                   </div>
                   <div>
                     <h3>4</h3>
+                    <div>test4</div>
+                    <div>test4</div>
+                    <div>test4</div>
                   </div>
                   <div>
                     <h3>5</h3>
+                    <div>test5</div>
+                    <div>test5</div>
+                    <div>test5</div>
                   </div>
                   <div>
                     <h3>6</h3>
+                    <div>test6</div>
+                    <div>test6</div>
+                    <div>test6</div>
                   </div>
                 </Slider>
-              </div>
+ 
             </div>
             <img className="mainImg_roadmap" alt="main" src={roadmap}></img>
           </div>
