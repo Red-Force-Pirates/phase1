@@ -15,7 +15,7 @@ const MainStory = styled.div`
     font-family: 'Rock Salt', cursive;
   }
 
-  .container{
+  .container_main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ const MainStory = styled.div`
     background-color: black;
   }
 
-  .mainImg {
+  .mainImg_main {
     width: 80%;
   }
   
@@ -45,9 +45,9 @@ function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-            <div className="container">
+            <div className="container_main">
               <div className="phase_v">Phase 0.</div>
-              <img className="mainImg" alt="main" src={main}></img>
+              <img className="mainImg_main" alt="main" src={main}></img>
             </div>
       </MainStory>
     </>
