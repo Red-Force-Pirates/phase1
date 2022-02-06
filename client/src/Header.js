@@ -183,10 +183,11 @@ const Header = () => {
               <ul>
                 <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
                 <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
-                <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
+                <li><NavLink to="/concept" ><p>CONCEPT</p></NavLink></li>
                 {/* <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li> */}
                 {/* <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li> */}
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
+                <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
                 {/* <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li> */}
                 {/* <li><NavLink to="/item" ><p>ITEM</p></NavLink></li> */}
                 {/* 햄버거메뉴 */}
