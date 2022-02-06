@@ -189,6 +189,7 @@ const Header = () => {
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
                 <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
                 {/* <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li> */}
+                <li><NavLink to="/tavern/page/1" ><p>TAVERN</p></NavLink></li>
                 {/* <li><NavLink to="/item" ><p>ITEM</p></NavLink></li> */}
                 {/* 햄버거메뉴 */}
                 <button onClick={handleClick} className="Burger">
