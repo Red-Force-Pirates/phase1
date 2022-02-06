@@ -34,7 +34,11 @@ function Roadmap() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
             <div className="container_roadmap">
-              <div className="phase_carousel">Phase 0.</div>
+              <div className="phase_carousel">
+                <div>
+                  test
+                </div>
+              </div>
               <img className="mainImg_roadmap" alt="main" src={roadmap}></img>
             </div>
         </RoadmapStyle>
