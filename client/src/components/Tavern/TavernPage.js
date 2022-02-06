@@ -209,15 +209,15 @@ export default function TavernPage() {
   return (
     <>
     <Paper sx={{  maxWidth: "80%", margin: "auto" }}>
-      <div style={{ padding:20 }}>주제</div>
-      <TableContainer sx={{ minHeight: 536, maxWidth: "98%", margin: "auto" }}>
+      <br />
+      <TableContainer sx={{ minHeight: 536.528, maxWidth: "98%", margin: "auto" }}>
         <Table size="small" sx={{ maxWidth: "98%", margin: "auto", backgroundColor: "black"}} aria-label="simple table">
           <TableHead sx={{ backgroundColor: "white" }}>
             <TableRow >
-              <TableCell></TableCell>
-              <TableCell width="15%" align="center">작성자</TableCell>
-              <TableCell width="10%" align="center">조회수</TableCell>
-              <TableCell width="15%" align="center">마지막 활동</TableCell>
+              <TableCell sx={{ fontWeight:1000 , fontSize: 15 }}>제목</TableCell>
+              <TableCell sx={{ fontWeight:1000 , fontSize: 15 }} width="15%" align="center">작성자</TableCell>
+              <TableCell sx={{ fontWeight:1000 , fontSize: 15 }} width="10%" align="center">조회수</TableCell>
+              <TableCell sx={{ fontWeight:1000 , fontSize: 15 }} width="15%" align="center">마지막 활동</TableCell>
             </TableRow>
           </TableHead>
           <TableBody >
@@ -257,7 +257,7 @@ export default function TavernPage() {
           </form>
         </Box>
         <Box sx={{ display:"inline-block", float:"right", margin:1 }}>
-          <ColorButton variant="text" component={Link} to="/tavern">글 쓰기</ColorButton>
+          <ColorButton sx={{ fontWeight:1000 , fontSize: 15 }} variant="text" component={Link} to="/tavern">글 쓰기</ColorButton>
         </Box>
     </Paper>
     <Paging />

@@ -31,12 +31,25 @@ ul.pagination li a {
   font-size: 1rem; 
 } 
 
+ul.pagination li { 
+  cursor: pointer;
+} 
+
+ul.pagination li.disabled { 
+  cursor: default;
+} 
+
 ul.pagination li.active a { 
   color: white; 
 } 
 
 ul.pagination li.active { 
   background-color: rgb(24, 21, 21); 
+} 
+
+ul.pagination li.disabled a { 
+  color: grey; 
+  cursor: default;
 } 
 
 ul.pagination li a:hover, ul.pagination li a.active {
