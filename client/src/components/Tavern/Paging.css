@@ -39,12 +39,8 @@ ul.pagination li.disabled {
   cursor: default;
 } 
 
-ul.pagination li.active a { 
-  color: white; 
-} 
-
 ul.pagination li.active { 
-  background-color: rgb(24, 21, 21); 
+  background-color: lightgray;
 } 
 
 ul.pagination li.disabled a { 
@@ -52,8 +48,12 @@ ul.pagination li.disabled a {
   cursor: default;
 } 
 
-ul.pagination li a:hover, ul.pagination li a.active {
-   color: grey; 
+ul.pagination li:hover{
+  background-color: rgb(90, 89, 89);
+} 
+
+ul.pagination li:hover a, ul.pagination li.active a {
+   color: black; 
 } 
 
 .page-selection {
