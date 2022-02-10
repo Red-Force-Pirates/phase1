@@ -22,7 +22,7 @@ const Foot = styled.div`
         position: relative;
         /* position: absolute; */
         margin-top: 30px;
-        /* margin-bottom: 30px; */
+        margin-bottom: 30px;
         color: white;
         font-size: 1vw;
         line-height: 16px;
@@ -52,7 +52,7 @@ const Foot = styled.div`
     
     /* LEFT */
     .fContainer_left_content {
-        margin-right: 40px;
+        margin-right: 30px;
     }
 
     /* RIGHT */
@@ -110,7 +110,7 @@ const Footer = () => (
                     THE KLAYTN NETWORK'S FIRST
                     COMMUNITY FOR COLLECTIBLES
                     AND NON-FUNGIBLE TOKEN TRADERS.<br />
-                    SHARE YOUR JOY WITH GREAT PIRATES<br />
+                    SHARE YOUR JOY WITH GREAT PIRATES.<br />
                 </div>
                 {/* <div className="fContainer_left_content">
                     <a href='/'>SUGGESTIONS</a><br />

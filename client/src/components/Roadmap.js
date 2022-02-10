@@ -44,6 +44,11 @@ const RoadmapStyle = styled.div`
   }
 
   /* 컨텐츠 영역 */
+  .phase_0 {
+    background-color: cadetblue;
+    height: 100vh;
+  }
+
   .phase_head {
     font-family: 'Rock Salt', cursive;
     text-align: center;
@@ -77,11 +82,12 @@ function Roadmap() {
           <div className="container_roadmap">
             <div className="phase_carousel">
                 <Slider {...settings} className="roadmap_slider">
-                  <div>
+                  <div className="phase_0">
                     <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
                     <div className="phase_headline">페이즈 0는 해적단의 출항, 즉 NFT 프로젝트의 런칭을 의미합니다. <br />Phase 0 means the pirates set sail, that is, the launch of the NFT project.</div>
                     <div>test1</div>
                     <div>test1</div>
+                    <div>test1</div>                    
                   </div>
                   <div>
                     <h3>2</h3>
@@ -115,7 +121,6 @@ function Roadmap() {
                   </div>
                 </Slider>
             </div>
-            {/* <img className="mainImg_roadmap" alt="main" src={roadmap}></img> */}
           </div>
       </RoadmapStyle>
     </>
