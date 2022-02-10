@@ -15,15 +15,16 @@ const Foot = styled.div`
 
     /* fContainer1 */
     .fContainer {
-        background-color: black;
+        background-color: gray;
         vertical-align: middle;
         display: flex;
         align-items: center;
         position: relative;
+        /* position: absolute; */
         margin-top: 30px;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
         color: white;
-        font-size: 8px;
+        font-size: 1vw;
         line-height: 16px;
         font-family: 'Walter Turncoat', cursive;
         align-items: flex-start;

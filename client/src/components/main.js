@@ -8,10 +8,9 @@ const MainStory = styled.div`
   .phase_v {
     position: absolute;
     top: 10;
-    font-size: 80px;
+    font-size: 6vw;
     color: white;
     text-align: center;
-    /* font-family: 'Roboto', sans-serif; */
     font-family: 'Rock Salt', cursive;
   }
 
@@ -26,13 +25,6 @@ const MainStory = styled.div`
 
   .mainImg_main {
     width: 80%;
-  }
-  
-  /* 반응형 */
-  @media (max-width: 768px) {
-    .phase_v {
-      font-size: 40px;
-    }
   }
 `;
 

@@ -20,8 +20,7 @@ const HeaderNav = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background-color: black; */
-    /* position: relative; */
+    padding-left: 4vw;
   }
 
   li {
@@ -30,7 +29,7 @@ const HeaderNav = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-around;
-      font-size: 16px;
+      font-size: 1.6vw;
   }
 
   p {

@@ -57,6 +57,12 @@ const RoadmapStyle = styled.div`
     font-family: 'Walter Turncoat', cursive;
     text-align: center;
   }
+
+  .test {
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+  }
 `
 
 function Roadmap() {
@@ -73,7 +79,8 @@ function Roadmap() {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-          <div className="container_roadmap">
+          <div className="test"></div>
+          {/* <div className="container_roadmap">
             <div className="phase_carousel">
                 <Slider {...settings} className="roadmap_slider">
                   <div>
@@ -113,10 +120,9 @@ function Roadmap() {
                     <div>test6</div>
                   </div>
                 </Slider>
- 
             </div>
             <img className="mainImg_roadmap" alt="main" src={roadmap}></img>
-          </div>
+          </div> */}
       </RoadmapStyle>
     </>
   );
