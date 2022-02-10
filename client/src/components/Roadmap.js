@@ -20,15 +20,19 @@ const RoadmapStyle = styled.div`
 
   /* 캐러셀 */
   .phase_carousel {
-    position: absolute;
     width: 80%;
-    height: 100%;
-    top: 0;
+    height: 100vh;
     color: white;
+    background-color: darkgreen;
   }
 
+  .roadmap_slider {
+    background-color: darkblue;
+    height: 100%;
+    background: url(${roadmap}) no-repeat center/cover;
+  }
   /* 배경 불투명처리 */
-  .phase_carousel::before {
+  .roadmap_slider::before {
     content:"";
     background-color: black;
     opacity: 0.3;
@@ -37,11 +41,6 @@ const RoadmapStyle = styled.div`
     left: 0px;
     right: 0px;
     bottom: 0px;
-  }
-
-  .roadmap_slider {
-    /* background-color: darkgreen; */
-    height: 100%;
   }
 
   /* 컨텐츠 영역 */
@@ -58,11 +57,6 @@ const RoadmapStyle = styled.div`
     text-align: center;
   }
 
-  .test {
-    width: 100%;
-    height: 100vh;
-    background-color: green;
-  }
 `
 
 function Roadmap() {
@@ -79,8 +73,8 @@ function Roadmap() {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-          <div className="test"></div>
-          {/* <div className="container_roadmap">
+          {/* <div className="phase_carousel"></div> */}
+          <div className="container_roadmap">
             <div className="phase_carousel">
                 <Slider {...settings} className="roadmap_slider">
                   <div>
@@ -121,8 +115,8 @@ function Roadmap() {
                   </div>
                 </Slider>
             </div>
-            <img className="mainImg_roadmap" alt="main" src={roadmap}></img>
-          </div> */}
+            {/* <img className="mainImg_roadmap" alt="main" src={roadmap}></img> */}
+          </div>
       </RoadmapStyle>
     </>
   );

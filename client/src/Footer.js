@@ -15,7 +15,7 @@ const Foot = styled.div`
 
     /* fContainer1 */
     .fContainer {
-        background-color: gray;
+        /* background-color: gray; */
         vertical-align: middle;
         display: flex;
         align-items: center;
@@ -56,6 +56,10 @@ const Foot = styled.div`
     }
 
     /* RIGHT */
+    .fContainer_right {
+        padding-top: 10px;
+    }
+
     .imgSection {
         display: flex;
         justify-content: flex-end;
