@@ -80,7 +80,7 @@ const fieldStyle = {border: "none" ,background: "black" , resize : "none", width
 
 const TavernWrite = () => {
 	return (
-    <Paper sx={{ maxWidth: "80%", height:700, margin: "auto" }}>
+    <Paper sx={{ maxWidth: "80%", height:"45rem", margin: "auto" }}>
       <br />
       <Box style={{marginLeft: "2%", fontSize:20, fontWeight: 1000}} >Title</Box>
       <TextField 
@@ -92,7 +92,7 @@ const TavernWrite = () => {
         // required = "required"
       />
       <div>
-        <ReactQuill style={{ maxWidth: "96.04%", height: 500, margin: "auto", backgroundColor: "black", color:"white" }} theme="snow" modules={modules} />
+        <ReactQuill style={{ maxWidth: "96.04%", height: "32rem", margin: "auto", backgroundColor: "black", color:"white" }} theme="snow" modules={modules} />
       </div>
       <Box sx={{ textAlign: "center", marginTop:2 }}>
       {/* <ColorButton sx={{ fontWeight:1000 , fontSize: 15 }} variant="text" >글 저장하기</ColorButton> */}
