@@ -181,8 +181,7 @@ const Header = () => {
             <nav>
               <ul>
                 <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
-                <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
-                <li><NavLink to="/concept" ><p>CONCEPT</p></NavLink></li>
+                <li><NavLink to="/story" ><p>STORY</p></NavLink></li>
                 {/* <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li> */}
                 {/* <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li> */}
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>

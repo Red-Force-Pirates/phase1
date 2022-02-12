@@ -45,7 +45,7 @@ const RoadmapStyle = styled.div`
 
   /* 컨텐츠 영역 */
   .phase_0 {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     height: 100vh;
   }
 
