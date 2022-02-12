@@ -58,16 +58,17 @@ const upload = multer({
 // Use Board 이미지 업로드 변수 생성 (경로.형식.네이밍) End
 
 // Board
-router.get('/board/get', controllers.board_List_Controllers);
+router.get('/board', controllers.board_List_Controllers);
 router.get('/board/detail/:id', controllers.board_Detail_Controllers);
 router.post('/board/Insert', upload.single('image'), controllers.board_Insert_Controllers);
-router.post('/board/ImageUpload', upload.single('image'), controllers.board_Upload_Controllers);
+// router.post('/board/ImageUpload', upload.single('image'), controllers.board_Upload_Controllers);
+router.put('/board/update', controllers.board_Update_Controllers);
 router.delete('/board/delete/:id', controllers.board_Delete_Controllers);
 
 router.get('/comment/get', controllers.comment_List_Controllers);
 router.get('/comment/like', controllers.comment_Like_Controllers);
-router.get('/comment/insert', upload.single('image'), controllers.comment_Insert_Controllers);
-router.get('/comment/update', controllers.comment_Update_Controllers);
+router.post('/comment/insert', upload.single('image'), controllers.comment_Insert_Controllers);
+router.put('/comment/update', controllers.comment_Update_Controllers);
 router.get('/comment/delete', controllers.comment_Delete_Controllers);
 
 module.exports = router;
