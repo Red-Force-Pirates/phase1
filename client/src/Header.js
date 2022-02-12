@@ -202,8 +202,7 @@ const Header = () => {
                     <div className="exitBtn2"></div>
                   </button>
                   <ul className="sideUl">
-                    <div onClick={handleClick} className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
-                    <div onClick={handleClick} className="sideList"><NavLink to="/concept" ><p>CONCEPT</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/story" ><p>STORY</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/vault" ><p>VAULT</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
                   </ul>

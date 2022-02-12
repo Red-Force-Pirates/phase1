@@ -16,16 +16,18 @@ const RoadmapStyle = styled.div`
 
   .mainImg_roadmap {
     width: 80%;
+    
   }
 
-  /* 캐러셀 */
+  /* 컨텐츠 영역 */
   .phase_carousel {
     width: 80%;
     height: 100vh;
     color: white;
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
   }
 
+  /* 캐러셀 */
   .roadmap_slider {
     background-color: darkblue;
     height: 100%;
@@ -43,10 +45,10 @@ const RoadmapStyle = styled.div`
     bottom: 0px;
   }
 
-  /* 컨텐츠 영역 */
+  /* 페이즈 */
   .phase_0 {
     /* background-color: cadetblue; */
-    height: 100vh;
+    height: 80vh;
   }
 
   .phase_head {
@@ -58,6 +60,7 @@ const RoadmapStyle = styled.div`
     /* font-family: 'Gothic A1', sans-serif; */
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Rock Salt', cursive; */
+    /* font-family: 'Gowun Batang', serif; */
     font-family: 'Walter Turncoat', cursive;
     text-align: center;
   }
@@ -75,53 +78,54 @@ function Roadmap() {
   return (
     <>
       <RoadmapStyle >
+      {/* font */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-          {/* <div className="phase_carousel"></div> */}
-          <div className="container_roadmap">
-            <div className="phase_carousel">
-                <Slider {...settings} className="roadmap_slider">
-                  <div className="phase_0">
-                    <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
-                    <div className="phase_headline">페이즈 0는 해적단의 출항, 즉 NFT 프로젝트의 런칭을 의미합니다. <br />Phase 0 means the pirates set sail, that is, the launch of the NFT project.</div>
-                    <div>test1</div>
-                    <div>test1</div>
-                    <div>test1</div>                    
-                  </div>
-                  <div>
-                    <h3>2</h3>
-                    <div>test2</div>
-                    <div>test2</div>
-                    <div>test2</div>
-                  </div>
-                  <div>
-                    <h3>3</h3>
-                    <div>test3</div>
-                    <div>test3</div>
-                    <div>test3</div>
-                  </div>
-                  <div>
-                    <h3>4</h3>
-                    <div>test4</div>
-                    <div>test4</div>
-                    <div>test4</div>
-                  </div>
-                  <div>
-                    <h3>5</h3>
-                    <div>test5</div>
-                    <div>test5</div>
-                    <div>test5</div>
-                  </div>
-                  <div>
-                    <h3>6</h3>
-                    <div>test6</div>
-                    <div>test6</div>
-                    <div>test6</div>
-                  </div>
-                </Slider>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Batang&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
+      {/* body */}
+      <div className="container_roadmap">
+        <div className="phase_carousel">
+          <Slider {...settings} className="roadmap_slider">
+            <div className="phase_0">
+              <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
+              <div className="phase_headline">페이즈 0는 해적단의 출항, 즉 Pirates Dao의 런칭을 의미합니다. <br />Phase 0 means the pirates set sail, that is, the launch of the Pirates Dao.</div>
+              <div>test1</div>
+              <div>test1</div>
+              <div>test1</div>                    
             </div>
-          </div>
+            <div>
+              <h3>2</h3>
+              <div>test2</div>
+              <div>test2</div>
+              <div>test2</div>
+            </div>
+            <div>
+              <h3>3</h3>
+              <div>test3</div>
+              <div>test3</div>
+              <div>test3</div>
+            </div>
+            <div>
+              <h3>4</h3>
+              <div>test4</div>
+              <div>test4</div>
+              <div>test4</div>
+            </div>
+            <div>
+              <h3>5</h3>
+              <div>test5</div>
+              <div>test5</div>
+              <div>test5</div>
+            </div>
+            <div>
+              <h3>6</h3>
+              <div>test6</div>
+              <div>test6</div>
+              <div>test6</div>
+            </div>
+          </Slider>
+        </div>
+      </div>
       </RoadmapStyle>
     </>
   );
