@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import Header from "./Header";
 import Footer from "./Footer";
+import TemporaryDrawer from './components/Vault/Drawer';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -12,5 +13,6 @@ ReactDOM.render(
       <App />
       <Footer />
     </BrowserRouter>,
+    // <TemporaryDrawer />,
   document.getElementById('root')
 );
