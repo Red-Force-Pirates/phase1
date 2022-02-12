@@ -10,12 +10,15 @@ import { styled } from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
 import SearchIcon from '@mui/icons-material/Search';
 import { withStyles } from "@material-ui/core/styles";
-import { Box, margin } from '@mui/system';
+import { Box } from '@mui/system';
 
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    height: 50
+    height: 50,
+    '&:hover': {
+      background: grey[800],
+   },
   }
 }))(TableRow);
 
@@ -36,116 +39,17 @@ export default function TavernPage() {
   
   let params = useParams();
   const pagenum = parseInt(params.page)
-  const [inputData, setInputData] = useState([
-    {
-      bidx : 1,
-      buserid : "id",
-      btitle : "title" ,
-      bcontent : "content" ,
-      regdate : "regdate" ,
-      modidate : "modidate",
-      bhit : 0,
-      blikeuser : "likecount" },
-    {
-      bidx : 2,
-      buserid : "id",
-      btitle : "title" ,
-      bcontent : "content" ,
-      regdate : "regdate" ,
-      modidate : "modidate",
-      bhit : 0,
-      blikeuser : "likecount" },
-    {
-      bidx : 3,
-      buserid : "id",
-      btitle : "title" ,
-      bcontent : "content" ,
-      regdate : "regdate" ,
-      modidate : "modidate",
-      bhit : 0,
-      blikeuser : "likecount" },
-    {
-      bidx : 4,
-      buserid : "id",
-      btitle : "title" ,
-      bcontent : "content" ,
-      regdate : "regdate" ,
-      modidate : "modidate",
-      bhit : 0,
-      blikeuser : "likecount" },
-      {
-        bidx : 5,
-        buserid : "id",
-        btitle : "title" ,
-        bcontent : "content" ,
-        regdate : "regdate" ,
-        modidate : "modidate",
-        bhit : 0,
-        blikeuser : "likecount" },
-      {
-        bidx : 6,
-        buserid : "id",
-        btitle : "title" ,
-        bcontent : "content" ,
-        regdate : "regdate" ,
-        modidate : "modidate",
-        bhit : 0,
-        blikeuser : "likecount" },
-      {
-        bidx : 7,
-        buserid : "id",
-        btitle : "title" ,
-        bcontent : "content" ,
-        regdate : "regdate" ,
-        modidate : "modidate",
-        bhit : 0,
-        blikeuser : "likecount" },
-      {
-        bidx : 8,
-        buserid : "id",
-        btitle : "title" ,
-        bcontent : "content" ,
-        regdate : "regdate" ,
-        modidate : "modidate",
-        bhit : 0,
-        blikeuser : "likecount" },
-        {
-          bidx : 9,
-          buserid : "id",
-          btitle : "title" ,
-          bcontent : "content" ,
-          regdate : "regdate" ,
-          modidate : "modidate",
-          bhit : 0,
-          blikeuser : "likecount" },
-        {
-          bidx : 10,
-          buserid : "id",
-          btitle : "title" ,
-          bcontent : "content" ,
-          regdate : "regdate" ,
-          modidate : "modidate",
-          bhit : 0,
-          blikeuser : "likecount" },
-        {
-          bidx : 11,
-          buserid : "id",
-          btitle : "title" ,
-          bcontent : "content" ,
-          regdate : "regdate" ,
-          modidate : "modidate",
-          bhit : 0,
-          blikeuser : "likecount" },
-        {
-          bidx : 12,
-          buserid : "id",
-          btitle : "title" ,
-          bcontent : "content" ,
-          regdate : "regdate" ,
-          modidate : "modidate",
-          bhit : 0,
-          blikeuser : "likecount" },
-  ])
+
+  function createData(bidx, buserid, btitle, bcontent, regdate, modidate, bhit, blikecount) {
+    return { "bidx" : bidx, "buserid":buserid, "btitle" : btitle, "bcontent":bcontent, "regdate": regdate, "modidate":modidate, "bhit":bhit, "blikecount":blikecount };
+  }
+
+  let testArr = [];
+  for(var i=0; i<115; i++){
+    testArr.push(createData(i+1,"id","title","content","regdate","modidate",0,"likecount"))
+  }
+
+  const [inputData, setInputData] = useState(testArr);
 
 
   const callApi = async() => {
@@ -170,7 +74,7 @@ export default function TavernPage() {
       activePage={page}
       itemsCountPerPage={10}
       totalItemsCount={inputData.length}
-      pageRangeDisplayed={5}
+      pageRangeDisplayed={10}
       prevPageText={"‹"}
       nextPageText={"›"}
       onChange={handlePageChange} 
@@ -259,7 +163,7 @@ export default function TavernPage() {
           </form>
         </Box>
         <Box sx={{ display:"inline-block", float:"right", margin:1 }}>
-          <ColorButton sx={{ fontWeight:1000 , fontSize: 15 }} variant="text" component={Link} to="/tavern">글 쓰기</ColorButton>
+          <ColorButton sx={{ fontWeight:1000 , fontSize: 15 }} variant="text" component={Link} to="/tavern/write">글 쓰기</ColorButton>
         </Box>
     </Paper>
     <Paging />

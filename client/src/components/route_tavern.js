@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import { TavernMain, TavernPage } from './export';
+import { TavernPage, TavernWrite } from './export';
 
 function Tavern() {
   return (
         <Routes>
             <Route path="tavern/page/:page" element={<TavernPage />}/>
+            <Route path="tavern/write" element={<TavernWrite />}/>
         </Routes>
   );
 }

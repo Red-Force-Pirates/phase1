@@ -15,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/vault" element={<Vault />}/>
       </Routes>
+      
       <Tavern />
     </>
   );
