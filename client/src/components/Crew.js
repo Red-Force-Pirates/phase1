@@ -39,12 +39,13 @@ const ContainerStyle = styledcompoent.div`
 
   .mainContents {
     width: 88%;
-    height: 100%;
+    height: 98%;
   }
 
   .splide {
     padding-left: 4%;
     padding-right: 4%;
+    padding-bottom: 2%;
   }
 
   .splide__arrow {
