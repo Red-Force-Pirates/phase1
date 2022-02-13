@@ -95,7 +95,6 @@ const TavernWrite = () => {
         <ReactQuill style={{ maxWidth: "96.04%", height: "32rem", margin: "auto", backgroundColor: "black", color:"white" }} theme="snow" modules={modules} />
       </div>
       <Box sx={{ textAlign: "center", marginTop:2 }}>
-      {/* <ColorButton sx={{ fontWeight:1000 , fontSize: 15 }} variant="text" >글 저장하기</ColorButton> */}
       <AlertDialog/>
       </Box>
     </Paper>
