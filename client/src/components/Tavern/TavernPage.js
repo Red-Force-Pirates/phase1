@@ -52,14 +52,16 @@ export default function TavernPage() {
   const [inputData, setInputData] = useState(testArr);
 
 
-//   const callApi = async() => {
-//     const response = await axios.get("http://localhost:3001/board")
-//     setInputData([...inputData,...response.data])
-//   }
+  const callApi = async() => {
+    const response = await axios.get("http://localhost:3001/board");
+    console.log("response : ");
+    console.log(response.data);
+    setInputData([...inputData,...response.data])
+  }
   
-//   useEffect(() => {
-//     callApi();
-//   },[]);
+  useEffect(() => {
+    callApi();
+  },[]);
 
   const Paging = () => {
     const [page, setPage] = useState(parseInt(params.page));

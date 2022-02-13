@@ -1,6 +1,6 @@
-const con = require("../utils/db");
+const con = require("../../utils/db");
 const modelExports = (module.exports = {});
-const controllers = require("../controllers/controllers");
+const controllers = require("../../controllers/controllers");
 
 // const mysql = require('mysql');
 

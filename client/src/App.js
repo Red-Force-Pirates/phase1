@@ -2,6 +2,7 @@ import "./assets/css/App.css";
 import { Routes, Route } from 'react-router-dom';
 import { Main, Login, Logout, Register, Roadmap, Crew } from './components/export';
 import Tavern from './components/route_tavern';
+import Vault from './components/Vault/Vault';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/logout" element={<Logout />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/crew" element={<Crew />}/>
+        <Route path="/vault" element={<Vault />}/>
       </Routes>
       
       <Tavern />
