@@ -4,8 +4,8 @@ import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 
 import { Component } from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+// import Carousel from 'react-multi-carousel';
+// import 'react-multi-carousel/lib/styles.css';
 
 
 export default function Crew() {
