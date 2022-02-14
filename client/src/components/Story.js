@@ -22,14 +22,14 @@ const RoadmapStyle = styled.div`
   /* 컨텐츠 영역 */
   .phase_carousel {
     width: 80%;
-    height: 100vh;
+    height: 100%;
     color: white;
     /* background-color: darkgreen; */
   }
 
   /* 캐러셀 */
   .roadmap_slider {
-    background-color: darkblue;
+    /* background-color: darkblue; */
     height: 100%;
     background: url(${roadmap}) no-repeat center/cover;
   }
@@ -37,7 +37,7 @@ const RoadmapStyle = styled.div`
   .roadmap_slider::before {
     content:"";
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.5;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -47,8 +47,8 @@ const RoadmapStyle = styled.div`
 
   /* 페이즈 */
   .phase_0 {
-    /* background-color: cadetblue; */
-    height: 100vh;
+    /* background-color: darkblue; */
+    height: 100%;
   }
 
   .phase_head {
@@ -62,17 +62,10 @@ const RoadmapStyle = styled.div`
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Rock Salt', cursive; */
     /* font-family: 'Gowun Batang', serif; */
+    padding: 0px 8px;
     font-family: 'Walter Turncoat', cursive;
     text-align: center;
     font-size: 1.4vw;
-  }
-
-  .phase_0_concept {
-    display: flex;
-    padding: 6vw 8vw;
-    font-size: 1.4vw;
-    line-height: 1.4;
-    justify-content: space-between;
   }
 
   .concept_head {
@@ -80,8 +73,32 @@ const RoadmapStyle = styled.div`
     font-size: 2vw;
   }
 
+  .phase_0_concept {
+    display: flex;
+    padding: 4vw 8vw;
+    font-size: 1.4vw;
+    line-height: 1.4;
+    justify-content: space-between;
+  }
+
+  .phase_0_idea {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .idea_list {
+    background-color: darkgoldenrod;
+    margin-top: -10px;
+  }
+
     /* 반응형 */
     @media (max-width: 768px) {
+      .phase_head {
+        font-size: 4vw;
+      }
+      .phase_headline {
+        font-size: 3vw;
+      }
       .phase_0_concept {
           display: block;
       }
@@ -110,19 +127,24 @@ function Roadmap() {
             <div className="phase_0">
               <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
               <div className="phase_headline">
-                페이즈 0는 해적단의 출항, 즉 Pirates Dao의 런칭을 의미합니다. <br />Phase 0 means the pirates set sail, that is, the launch of the Pirates Dao.
+                페이즈 0는 해적단의 출항, Pirates Dao의 런칭을 의미합니다. <br />Phase 0 means the pirates set sail, that is, the launch of the Pirates Dao.
                 <br /><br />
-                그리고 Pirates DAO에 대한 주요 개념과 세계관을 소개합니다.<br />And introduces the main concepts and worldviews of Pirates DAO.
+                Pirates DAO에 대한 주요 개념과 세계관을 소개합니다.<br />And introduces the main concepts and worldviews of Pirates DAO.
               </div>
               <div className="phase_0_concept">
                 <div className="concept_head">'Pirates DAO'</div>
                 <div>
                   Pirates DAO는 Klaytn 기반 <b>'탈중앙화 커뮤니티'</b>입니다.<br />
-                  Pirates DAO의 nft를 가진 누구나 자유롭게 컨텐츠를 생산할 수 있는 공간입니다.<br />
+                  프로필 nft를 가진 누구나 자유롭게 컨텐츠를 생산할 수 있는 공간입니다.<br />
                   그리고 컨텐츠로 발생한 수익은 생산자가 가져가는 구조입니다.<br />
                 </div>
               </div>
-              <div className="phase_0_idea">test</div>
+              <div className="phase_0_idea">
+                <ul className="idea_list">
+                  Phase 0 Main Idea
+                  <li>병에 든 쪽지(초대권)</li>
+                </ul>
+              </div>
             </div>
             <div>
               <h3>2</h3>
