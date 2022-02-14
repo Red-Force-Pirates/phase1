@@ -182,6 +182,7 @@ const Header = () => {
               <ul>
                 <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
                 <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
+                <li><NavLink to="/concept" ><p>concept_head</p></NavLink></li>
                 {/* <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li> */}
                 {/* <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li> */}
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
@@ -202,7 +203,7 @@ const Header = () => {
                     <div className="exitBtn2"></div>
                   </button>
                   <ul className="sideUl">
-                    <div onClick={handleClick} className="sideList"><NavLink to="/story" ><p>STORY</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/vault" ><p>VAULT</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
                   </ul>

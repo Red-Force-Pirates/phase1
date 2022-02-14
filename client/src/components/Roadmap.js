@@ -116,11 +116,6 @@ const RoadmapStyle = styled.div`
     .concept_head {
       font-size: 2.8vw;
     }
-    /* 줄바꿈 */
-    /* span {
-      display: block;
-      background-color: red;
-    } */
   }
 
   @media (max-width: 375px) {
@@ -179,6 +174,12 @@ function Roadmap() {
               </div>
             </div>
             <div>
+              <h3>1</h3>
+              <div>test1</div>
+              <div>test1</div>
+              <div>test1</div>
+            </div>
+            <div>
               <h3>2</h3>
               <div>test2</div>
               <div>test2</div>
@@ -189,24 +190,6 @@ function Roadmap() {
               <div>test3</div>
               <div>test3</div>
               <div>test3</div>
-            </div>
-            <div>
-              <h3>4</h3>
-              <div>test4</div>
-              <div>test4</div>
-              <div>test4</div>
-            </div>
-            <div>
-              <h3>5</h3>
-              <div>test5</div>
-              <div>test5</div>
-              <div>test5</div>
-            </div>
-            <div>
-              <h3>6</h3>
-              <div>test6</div>
-              <div>test6</div>
-              <div>test6</div>
             </div>
           </Slider>
         </div>
