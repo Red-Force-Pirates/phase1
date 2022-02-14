@@ -64,7 +64,7 @@ const RoadmapStyle = styled.div`
     /* font-family: 'Gowun Batang', serif; */
     font-family: 'Walter Turncoat', cursive;
     text-align: center;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
   }
 
   .phase_0_concept {
