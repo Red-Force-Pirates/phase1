@@ -9,7 +9,7 @@ const MainStory = styled.div`
     text-align: center;
     /* font-family: 'Nanum Brush Script', cursive; */
     font-family: 'East Sea Dokdo', cursive;
-    font-size: 2.4vw;
+    font-size: 3.2vw;
     padding: 0px 0px 10px;
     color: white;
   }
@@ -35,6 +35,13 @@ const MainStory = styled.div`
   .mainImg_main {
     width: 80%;
   }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+      .project_intro {
+        font-size: 6vw;
+      }
+    }
 `;
 
 

@@ -71,6 +71,7 @@ const RoadmapStyle = styled.div`
   .concept_head {
     font-family: 'Walter Turncoat', cursive;
     font-size: 2vw;
+    padding-left: 8vw;
   }
 
   .phase_0_concept {
@@ -84,24 +85,55 @@ const RoadmapStyle = styled.div`
   .phase_0_idea {
     display: flex;
     justify-content: space-around;
+    padding: 10px 0px;
   }
 
   .idea_list {
-    background-color: darkgoldenrod;
+    /* background-color: darkgoldenrod; */
     margin-top: -10px;
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 2.4vw;
   }
 
-    /* 반응형 */
-    @media (max-width: 768px) {
-      .phase_head {
-        font-size: 4vw;
-      }
-      .phase_headline {
-        font-size: 3vw;
-      }
-      .phase_0_concept {
-          display: block;
-      }
+  .idea_item {
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'East Sea Dokdo', cursive;
+    padding-top: 1vw;
+  }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .phase_head {
+      font-size: 4vw;
+    }
+    .phase_headline {
+      font-size: 2.8vw;
+    }
+    .phase_0_concept {
+      font-size: 2.8vw;
+    }
+    .concept_head {
+      font-size: 2.8vw;
+    }
+    /* 줄바꿈 */
+    /* span {
+      display: block;
+      background-color: red;
+    } */
+  }
+
+  @media (max-width: 375px) {
+    span {
+      display: block;
+      background-color: red;
+    }
+    .phase_0_concept {
+        display: block;
+    }
+    .concept_head {
+      padding-left: 0px;
+    }
   }
 `
 
@@ -119,7 +151,7 @@ function Roadmap() {
       {/* font */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Batang&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
       {/* body */}
       <div className="container_roadmap">
         <div className="phase_carousel">
@@ -127,22 +159,23 @@ function Roadmap() {
             <div className="phase_0">
               <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
               <div className="phase_headline">
-                페이즈 0는 해적단의 출항, Pirates Dao의 런칭을 의미합니다. <br />Phase 0 means the pirates set sail, that is, the launch of the Pirates Dao.
+                페이즈 0는 Klaytn 기반 탈중앙화 커뮤니티,<br /> 'Pirates Dao'의 런칭입니다. <br />Phase 0 is the launch of Pirates Dao,<br /> a Klaytn-based decentralized community.
                 <br /><br />
-                Pirates DAO에 대한 주요 개념과 세계관을 소개합니다.<br />And introduces the main concepts and worldviews of Pirates DAO.
+                Pirates DAO의 세계관과 Phase 0의 아이디어를 소개합니다.<br />Introduce the worldview of Pirates DAO and the ideas of Phase 0.
               </div>
               <div className="phase_0_concept">
                 <div className="concept_head">'Pirates DAO'</div>
                 <div>
-                  Pirates DAO는 Klaytn 기반 <b>'탈중앙화 커뮤니티'</b>입니다.<br />
-                  프로필 nft를 가진 누구나 자유롭게 컨텐츠를 생산할 수 있는 공간입니다.<br />
-                  그리고 컨텐츠로 발생한 수익은 생산자가 가져가는 구조입니다.<br />
+                  <span>Pirates DAO는 Klaytn 기반 <b>'탈중앙화 커뮤니티'</b>입니다.<br /></span>
+                  <span>프로필 nft를 가진 누구나 컨텐츠를 생산할 수 있습니다.<br /></span>
+                  <span>컨텐츠로 발생한 수익은 생산자가 가져가는 구조입니다.</span>
                 </div>
               </div>
               <div className="phase_0_idea">
                 <ul className="idea_list">
-                  Phase 0 Main Idea
-                  <li>병에 든 쪽지(초대권)</li>
+                  Phase_0 Idea.
+                  <li className="idea_item">'병에 든 쪽지'</li>
+                  <li className="idea_item">'수배서'</li>
                 </ul>
               </div>
             </div>
