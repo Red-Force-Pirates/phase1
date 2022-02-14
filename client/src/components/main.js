@@ -16,11 +16,12 @@ const MainStory = styled.div`
   
   .phase_v {
     position: absolute;
-    top: 10;
-    font-size: 4vw;
+    top: 36px;
+    font-size: 8vw;
     color: white;
     text-align: center;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Anton', sans-serif;
+    text-decoration: none;
   }
 
   .container_main{
@@ -52,10 +53,10 @@ function Home() {
       <MainStory >
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
-        <div className="project_intro">Klaytn 탈중앙화 커뮤니티 Pirates DAO.</div>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
+        {/* <div className="project_intro">Klaytn 탈중앙화 커뮤니티 Pirates DAO.</div> */}
         <div className="container_main">
-          <div className="phase_v">Phase 0.</div>
+          <a href="/story" className="phase_v">JOIN THE PIRATES DAO</a>
           <img className="mainImg_main" alt="main" src={main}></img>
         </div>
       </MainStory>

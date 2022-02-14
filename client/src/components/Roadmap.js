@@ -126,7 +126,6 @@ const RoadmapStyle = styled.div`
   @media (max-width: 375px) {
     span {
       display: block;
-      background-color: red;
     }
     .phase_0_concept {
         display: block;
