@@ -24,14 +24,15 @@ const RoadmapStyle = styled.div`
     width: 80%;
     height: 100%;
     color: white;
-    /* background-color: darkgreen; */
+    background-color: darkgreen;
+    background: url(${roadmap}) no-repeat center/cover;
   }
 
   /* 캐러셀 */
   .roadmap_slider {
-    /* background-color: darkblue; */
+    /* background-color: darkgray; */
     height: 100%;
-    background: url(${roadmap}) no-repeat center/cover;
+    /* background: url(${roadmap}) no-repeat center/cover; */
   }
   /* 배경 불투명처리 */
   .roadmap_slider::before {
@@ -43,6 +44,11 @@ const RoadmapStyle = styled.div`
     left: 0px;
     right: 0px;
     bottom: 0px;
+  }
+  .slideNext {
+    background-color: brown;
+    display: flex;
+    justify-content: space-around;
   }
 
   /* 페이즈 */
@@ -71,26 +77,25 @@ const RoadmapStyle = styled.div`
   .concept_head {
     font-family: 'Walter Turncoat', cursive;
     font-size: 2vw;
-    padding-left: 8vw;
+    padding-left: 12vw;
   }
 
   .phase_0_concept {
     display: flex;
-    padding: 4vw 8vw;
+    padding: 4vw 8vw 1vw 8vw;
     font-size: 1.4vw;
     line-height: 1.4;
     justify-content: space-between;
   }
 
-  .phase_0_idea {
+  .phase_0_item {
     display: flex;
     justify-content: space-around;
-    padding: 10px 0px;
+    padding-bottom: 2vw;
   }
 
-  .idea_list {
+  .item_list {
     /* background-color: darkgoldenrod; */
-    margin-top: -10px;
     font-family: 'Walter Turncoat', cursive;
     font-size: 2.4vw;
   }
@@ -154,8 +159,6 @@ function Roadmap() {
               <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
               <div className="phase_headline">
                 페이즈 0는 Klaytn 기반 탈중앙화 커뮤니티,<br /> 'Pirates Dao'의 런칭입니다. <br />Phase 0 is the launch of Pirates Dao,<br /> a Klaytn-based decentralized community.
-                <br /><br />
-                Pirates DAO의 세계관과 Phase 0의 아이디어를 소개합니다.<br />Introduce the worldview of Pirates DAO and the ideas of Phase 0.
               </div>
               <div className="phase_0_concept">
                 <div className="concept_head">'Pirates DAO'</div>
@@ -165,9 +168,9 @@ function Roadmap() {
                   <span>컨텐츠로 발생한 수익은 생산자가 가져가는 구조입니다.</span>
                 </div>
               </div>
-              <div className="phase_0_idea">
-                <ul className="idea_list">
-                  Phase_0 Idea.
+              <div className="phase_0_item">
+                <ul className="item_list">
+                  Phase_0 Main Item.
                   <li className="idea_item">'병에 든 쪽지'</li>
                   <li className="idea_item">'수배서'</li>
                 </ul>
@@ -191,7 +194,7 @@ function Roadmap() {
               <div>test3</div>
               <div>test3</div>
             </div>
-          </Slider>
+          </Slider>          
         </div>
       </div>
       </RoadmapStyle>
