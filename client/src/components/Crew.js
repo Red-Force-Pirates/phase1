@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles';
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor:"black",
   color: "white", 
-  width: "19.8rem", 
+  width: "100%", 
   border: "2px solid white", 
   ...theme.typography.body2,
   display:"flex" , 
@@ -18,9 +18,16 @@ const Item = styled(Paper)(({ theme }) => ({
   justifyContent:"center",
 }));
 
+const CrewContainer = styled(Grid)(({ theme }) => ({
+  direction: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "17.8rem"
+}));
+
 const StyledAvatar = styled(Avatar)(() => ({
   position: "relative", 
-  top: "2rem", 
+  top: "1rem", 
   border: "7px solid white", 
   width: "8rem", 
   height: "8rem"
@@ -32,30 +39,25 @@ const ContainerStyle = styledcompoent.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 600px;
     position: relative;
     background-color: black;
   }
 
   .mainContents {
-    width: 88%;
-    height: 98%;
+    width: 80%;
+    height: 100%;
   }
 
-  .splide {
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 2%;
+  .pfpContainer {
+    height: 7rem;
   }
 
-  .splide__arrow {
-    width: 3em;
-    height: 3em;
-  }
-  
-  .arrow {
-    width: 6rem;
-    height: 6rem;
+  .crewHeader {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+    height: 5rem; 
+    padding-top: 3rem;
+    border-bottom: 0;
   }
 
   .crewFooter {
@@ -72,20 +74,14 @@ const ContainerStyle = styledcompoent.div`
 
   .crewContent {
     font-size: 1rem;
-    height: 6rem;
+    height: 4rem;
     border-top: 0;
     border-bottom: 0;
   }
 
-  .crewHeader {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.2rem;
-    height: 6rem; 
-    padding-top: 4rem;
-    border-bottom: 0;
-  }
+  
 `
-const crewFooterContainer = { height: "13rem", 
+const crewFooterContainer = { height: "4rem", 
   borderTop:0, 
   flexDirection:"column", 
   justifyContent: "space-around", 
@@ -94,260 +90,202 @@ const crewFooterContainer = { height: "13rem",
 
 const Test = () => {
   return(
-      <Splide
-        options={ {
-        rewind: true,
-        perPage : 4,
-        width : "100%",
-        gap   : 0,
-        } }
+      <Grid
+        className='crewlistContainer'
+        container
+        sx={{disply:"inline-flex"}}
+        justifyContent="center"
+        alignItems="center"
       >
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/crewprofile/jeanx.jpg"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              Creative Director
-              <br/>
-              jeanx#0001
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              폭주하는 이 시대를!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/crewprofile/jeanx.jpg"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            Creative Director
+            <br/>
+            jeanx#0001
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+            <br/>
+            3줄은 ㄱㅊ?
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Dogedoil
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Dogedoil
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/crewprofile/benbeckat.jpg"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              rapper
-              <br/>
-              ben beckat#0002
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              폭주하는 이 시대를!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/crewprofile/benbeckat.jpg"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            rapper
+            <br/>
+            ben beckat#0002
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+            <br/>
+            3줄은 ㄱㅊ?
+            <br/>
+            3줄까지만
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Jhin_93
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Jhin_93
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/crewprofile/woogi.jpg"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              winboong
-              <br/>
-              woogi#0003
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              폭주하는 이 시대를!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/crewprofile/woogi.jpg"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            winboong
+            <br/>
+            woogi#0003
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Dogedoil
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Dogedoil
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/1.png"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              winboong
-              <br/>
-              wonny#0004
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              폭주하는 이 시대를!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            winboong
+            <br/>
+            wonny#0004
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Dogedoil
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Dogedoil
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/1.png"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              winboong
-              <br/>
-              jingbe#0005
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              클레이 다이노의 떡상을!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            winboong
+            <br/>
+            jingbe#0005
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Dogedoil
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Dogedoil
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/1.png"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              winboong
-              <br/>
-              sky#0006
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              폭주하는 이 시대를!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            winboong
+            <br/>
+            sky#0006
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Dogedoil
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Dogedoil
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-        <SplideSlide>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Item sx={{ height: "8rem" }} square >
-              <StyledAvatar src="/img/1.png"></StyledAvatar>
-            </Item>
-            <Item className='crewHeader' square >
-              designer
-              <br/>
-              #0007
-            </Item>
-            <Item className='crewContent' square >
-              “그 누구도 막을 수 없게 될 거요···!!! 
-              <br/>
-              폭주하는 이 시대를!!!”
-            </Item>
-            <Item sx={crewFooterContainer} square >
-              <div style={{width:"100%"}}>
-                <img className='arrow' src='/img/Arrow.png'/>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            designer
+            <br/>
+            design#0007
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Dogedoil
               </div>
-              <div className='crewFooter'>
-                <div className='crewFooterContent'>
-                  @Dogedoil
-                </div>
-                <div className='crewFooterContent'>
-                  follow
-                </div>
+              <div className='crewFooterContent'>
+                follow
               </div>
-            </Item>
-          </Grid>
-        </SplideSlide>
-      </Splide>
+            </div>
+          </Item>
+        </CrewContainer>
+      </Grid>
   )
 }
 
