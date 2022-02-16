@@ -80,7 +80,7 @@ const RoadmapStyle = styled.div`
     padding-left: 12vw;
   }
 
-  .phase_0_concept {
+  .phase_concept {
     display: flex;
     padding: 4vw 8vw 1vw 8vw;
     font-size: 1.4vw;
@@ -98,6 +98,7 @@ const RoadmapStyle = styled.div`
     /* background-color: darkgoldenrod; */
     font-family: 'Walter Turncoat', cursive;
     font-size: 2.4vw;
+    text-align: center;
   }
 
   .idea_item {
@@ -115,11 +116,14 @@ const RoadmapStyle = styled.div`
     .phase_headline {
       font-size: 2.8vw;
     }
-    .phase_0_concept {
+    .phase_concept {
       font-size: 2.8vw;
     }
     .concept_head {
       font-size: 2.8vw;
+    }
+    .idea_item{
+      font-size: 8vw;
     }
   }
 
@@ -127,11 +131,15 @@ const RoadmapStyle = styled.div`
     span {
       display: block;
     }
-    .phase_0_concept {
+    .phase_concept {
         display: block;
     }
     .concept_head {
       padding-left: 0px;
+    }
+
+    .idea_item{
+      font-size: 8vw;
     }
   }
 `
@@ -160,7 +168,7 @@ function Roadmap() {
               <div className="phase_headline">
                 페이즈 0는 Klaytn 기반 탈중앙화 커뮤니티,<br /> 'Pirates Dao'의 런칭입니다. <br />Phase 0 is the launch of Pirates Dao,<br /> a Klaytn-based decentralized community.
               </div>
-              <div className="phase_0_concept">
+              <div className="phase_concept">
                 <div className="concept_head">'Pirates DAO'</div>
                 <div>
                   <span>Pirates DAO는 Klaytn 기반 <b>'탈중앙화 커뮤니티'</b>입니다.<br /></span>
@@ -170,29 +178,29 @@ function Roadmap() {
               </div>
               <div className="phase_0_item">
                 <ul className="item_list">
-                  Phase_0 Main Item.
+                  Click each Item.
                   <li className="idea_item">'병에 든 쪽지'</li>
                   <li className="idea_item">'수배서'</li>
                 </ul>
               </div>
             </div>
             <div>
-              <h3>1</h3>
-              <div>test1</div>
-              <div>test1</div>
-              <div>test1</div>
+            <h1 className="phase_head">Phase 1.<br /> Tavern & Sea Map</h1>
+              <div className="phase_headline">
+                페이즈 1에선 nft로 할 수 있는 각종 기능들을 출시합니다. <br />그중 선술집(Tavern)' 과 '해도(Sea Map)'가 핵심 컨텐츠입니다.  <br />Phase 1 releases various functions that can be done with nft.<br />Among them, Tavern and Sea Map are key contents.
+              </div>
+              <div className="phase_0_item">
+                <ul className="item_list">
+                  Click each Item.
+                  <li className="idea_item">'선술집(TAVERN)'</li>
+                  <li className="idea_item">'해도(Sea Map)'</li>
+                </ul>
+              </div>
             </div>
             <div>
-              <h3>2</h3>
               <div>test2</div>
               <div>test2</div>
               <div>test2</div>
-            </div>
-            <div>
-              <h3>3</h3>
-              <div>test3</div>
-              <div>test3</div>
-              <div>test3</div>
             </div>
           </Slider>          
         </div>
