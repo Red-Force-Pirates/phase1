@@ -16,7 +16,7 @@ const RoadmapStyle = styled.div`
 
   /* 컨텐츠 영역 */
   .phase_carousel {
-    width: 80%;
+    width: 120%;
     height: 100%;
     color: white;
     background-color: darkgreen;
@@ -25,9 +25,9 @@ const RoadmapStyle = styled.div`
 
   /* 캐러셀 */
   .roadmap_slider {
+    padding-top: 20px;
     /* background-color: darkgray; */
     height: 100%;
-    /* background: url(${roadmap}) no-repeat center/cover; */
   }
   /* 배경 불투명처리 */
   .roadmap_slider::before {
@@ -58,6 +58,12 @@ const RoadmapStyle = styled.div`
     /* font-size: 4vw; */
   }
 
+  .coming_soon {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    font-size: 4vw;
+  }
+
   .phase_headline {
     /* font-family: 'Gothic A1', sans-serif; */
     /* font-family: 'Roboto', sans-serif; */
@@ -66,24 +72,29 @@ const RoadmapStyle = styled.div`
     padding: 0px 8px;
     font-family: 'Walter Turncoat', cursive;
     text-align: center;
-    font-size: 1.4vw;
+    font-size: 2vw;
   }
 
   .concept_head {
     font-family: 'Walter Turncoat', cursive;
     font-size: 2vw;
-    padding-left: 12vw;
+    padding-right: 4vw;
+    text-align: center;
+  }
+
+  .concept_body {
+    text-align: center;
   }
 
   .phase_concept {
     display: flex;
-    padding: 4vw 8vw 1vw 8vw;
+    padding: 6vw 8vw 1vw 8vw;
     font-size: 1.4vw;
     line-height: 1.4;
-    justify-content: space-between;
+    justify-content: center;
   }
 
-  .phase_0_item {
+  .phase_item {
     display: flex;
     justify-content: space-around;
     padding-bottom: 2vw;
@@ -94,13 +105,21 @@ const RoadmapStyle = styled.div`
     font-family: 'Walter Turncoat', cursive;
     font-size: 2.4vw;
     text-align: center;
+    padding-top: 40px;
   }
 
   .idea_item {
     text-align: center;
     font-size: 4vw;
     font-family: 'East Sea Dokdo', cursive;
-    padding-top: 1vw;
+    padding: 1vw 0;
+  }
+
+  .slide_next {
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 4vw;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   /* 반응형 */
@@ -113,30 +132,20 @@ const RoadmapStyle = styled.div`
     }
     .phase_concept {
       font-size: 2.8vw;
+      display: block;
     }
     .concept_head {
       font-size: 2.8vw;
+      padding-left: 0px;
     }
     .idea_item{
       font-size: 8vw;
     }
-  }
-
-  @media (max-width: 375px) {
     span {
       display: block;
     }
-    .phase_concept {
-        display: block;
-    }
-    .concept_head {
-      padding-left: 0px;
-    }
-
-    .idea_item{
-      font-size: 8vw;
-    }
   }
+
 `
 
 function Roadmap() {
@@ -161,41 +170,42 @@ function Roadmap() {
             <div className="phase_0">
               <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
               <div className="phase_headline">
-                페이즈 0는 Klaytn 기반 탈중앙화 커뮤니티,<br /> 'Pirates Dao'의 런칭입니다. <br />Phase 0 is the launch of Pirates Dao,<br /> a Klaytn-based decentralized community.
+                페이즈 0는 Klaytn 기반 탈중앙화 커뮤니티,<br /> 'Pirates Dao'의 런칭입니다. 
               </div>
               <div className="phase_concept">
                 <div className="concept_head">'Pirates DAO'</div>
-                <div>
+                <div className="concept_body">
                   <span>Pirates DAO는 Klaytn 기반 <b>'탈중앙화 커뮤니티'</b>입니다.<br /></span>
                   <span>프로필 nft를 가진 누구나 컨텐츠를 생산할 수 있습니다.<br /></span>
-                  <span>컨텐츠로 발생한 수익은 생산자가 가져가는 구조입니다.</span>
+                  <span>컨텐츠로 발생한 수익은 <b>생산자가 가져가는</b> 구조입니다.</span>
                 </div>
               </div>
-              <div className="phase_0_item">
+              <div className="phase_item">
                 <ul className="item_list">
                   Click each Item.
                   <li className="idea_item">'병에 든 쪽지'</li>
                   <li className="idea_item">'수배서'</li>
+                  <li className="slide_next">Slide next Phase ➸</li>
                 </ul>
               </div>
             </div>
-            <div>
-            <h1 className="phase_head">Phase 1.<br /> Tavern & Sea Map</h1>
+            <div className="phase_1">
+              <h1 className="phase_head">Phase 1.<br /> Tavern & Sea Map</h1>
               <div className="phase_headline">
-                페이즈 1에선 nft로 할 수 있는 각종 기능들을 출시합니다. <br />그중 선술집(Tavern)' 과 '해도(Sea Map)'가 핵심 컨텐츠입니다.  <br />Phase 1 releases various functions that can be done with nft.<br />Among them, Tavern and Sea Map are key contents.
+                페이즈 1에선 nft로 할 수 있는 각종 기능들을 출시합니다. <br />그중 선술집(Tavern)' 과 '해도(Sea Map)'가 핵심 컨텐츠입니다.
               </div>
-              <div className="phase_0_item">
+              <div className="phase_item">
                 <ul className="item_list">
                   Click each Item.
                   <li className="idea_item">'선술집(TAVERN)'</li>
                   <li className="idea_item">'해도(Sea Map)'</li>
+                  <li className="slide_next">Slide to next Phase ➸</li>
                 </ul>
               </div>
             </div>
-            <div>
-              <div>test2</div>
-              <div>test2</div>
-              <div>test2</div>
+            <div className="phase_2">
+              <h1 className="phase_head">Phase 2.</h1>
+              <h2 className="coming_soon">COMING SOON...</h2>
             </div>
           </Slider>          
         </div>

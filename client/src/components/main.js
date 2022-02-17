@@ -34,8 +34,6 @@ const MainStory = styled.div`
   }
 
   .mainImg_main {
-    /* padding-top: 40px; */
-    padding-bottom: 40px;
     width: 100%;
   }
 
@@ -58,7 +56,7 @@ function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
         {/* <div className="project_intro">Klaytn 탈중앙화 커뮤니티 Pirates DAO.</div> */}
         <div className="container_main">
-          <a href="/roadmap" className="phase_v">JOIN THE PIRATES DAO</a>
+          <a href="/roadmap" className="phase_v">WELCOME TO PIRATESDAO</a>
           <img className="mainImg_main" alt="main" src={main}></img>
         </div>
       </MainStory>
