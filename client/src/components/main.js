@@ -34,7 +34,9 @@ const MainStory = styled.div`
   }
 
   .mainImg_main {
-    width: 80%;
+    /* padding-top: 40px; */
+    padding-bottom: 40px;
+    width: 100%;
   }
 
   /* 반응형 */
