@@ -14,11 +14,6 @@ const RoadmapStyle = styled.div`
     position: relative;
   }
 
-  .mainImg_roadmap {
-    width: 80%;
-    
-  }
-
   /* 컨텐츠 영역 */
   .phase_carousel {
     width: 80%;
