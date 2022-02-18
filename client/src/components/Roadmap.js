@@ -16,7 +16,7 @@ const RoadmapStyle = styled.div`
 
   /* 컨텐츠 영역 */
   .phase_carousel {
-    width: 120%;
+    width: 100%;
     height: 100%;
     color: white;
     background-color: darkgreen;

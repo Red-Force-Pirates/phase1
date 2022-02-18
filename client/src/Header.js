@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from "styled-components";
 import logo from "../src/assets/img/logo.png"
-import { useEffect, useState } from 'react';
 
 
 const HeaderNav = styled.div`
@@ -204,6 +203,7 @@ const Header = () => {
                   </button>
                   <ul className="sideUl">
                     <div onClick={handleClick} className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/concept" ><p>CONCEPT</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/vault" ><p>VAULT</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
                   </ul>
