@@ -26,22 +26,40 @@ const ConceptStyle = styled.div`
         .container1_intro_text {
             color: white;
             /* background-color: darkgray; */
-            /* margin: -20px 0px; */
             .c1_headline {
-                font-size: 4.8vw;
+                font-size: 72px;
                 font-family: 'Anton', sans-serif;
             }
             .c1_body {
-                /* font-size: 1.2vw; */
+                font-size: 20px;
             }
         }
 
-        .intro_image {
-            /* background-color: darkgrey; */
-            padding: 18px 0px;
+        .container1_intro_img {
+            .cat4_img {
+                /* background-color: darkblue; */
+                padding: 18px 0px;
+            }
         }
     }
 
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+        span {
+            display: block;
+        }
+        .container1_intro {
+            display: block;
+        }
+        .container1_intro_img {
+            display: flex;
+            justify-content: center;
+            .cat4_img {
+                margin: 0px 10px;
+            }
+        }
+    }
 `
 
 function Concept () {
@@ -56,18 +74,18 @@ function Concept () {
                         <div className="container1_intro_text">
                             <div className="c1_headline">WELCOME TO THE<br/> PIRATESDAO</div>
                             <p className="c1_body">
-                                PiratesDAO는 클레이튼 체인 위에 살고 있는<br /> 
-                                10000개의 대체 불가능한 토큰입니다.<br />
-                                각각의 고양이들은 200여개의 독특한 파트들로 구성되어<br />
-                                세상에 오직 하나만 존재하는 특별한 수집품입니다.<br />
+                                <span>PiratesDAO는 클레이튼 체인 위에 살고 있는<br /></span>
+                                <span>10000개의 대체 불가능한 토큰입니다.<br /></span>
+                                <span>각각의 고양이들은 200여개의 독특한 파트들로 구성되어<br /></span>
+                                <span>세상에 오직 하나만 존재하는 특별한 수집품입니다.<br /></span>
                                 <br />
-                                또한 www.piratesdao.org에서 프로필로 사용할 수 있으며<br />
-                                앞으로 추가될 선술집(커뮤니티), 해도(캘린더), 현상금수배서(시즌제 랭킹 시스템)<br />
-                                소셜네트워크, 디파이, 게임들의 기능들을 사용할 수 있습니다.
+                                <span>또한 www.piratesdao.org에서 프로필로 사용할 수 있으며<br /></span>
+                                <span>앞으로 추가될 선술집(커뮤니티), 해도(캘린더), 현상금수배서(시즌제 랭킹 시스템)<br /></span>
+                                <span>소셜네트워크, 디파이, 게임들의 기능들을 사용할 수 있습니다.</span>
                             </p>
                         </div>
-                        <div>
-                            <img className="intro_image" alt="main" src={catsample4}></img>
+                        <div className="container1_intro_img">
+                            <img className="cat4_img" alt="main" src={catsample4}></img>
                         </div>
                     </div>
                 </div>
