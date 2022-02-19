@@ -130,7 +130,7 @@ const HeaderNav = styled.div`
     /* background-color: cadetblue; */
     position: fixed;
     top: 40px;
-    right: 20px;
+    right: 40px;
     width: 100px;
     height: 200px;
     display: block;
