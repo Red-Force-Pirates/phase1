@@ -12,7 +12,7 @@ const ConceptStyle = styled.div`
         justify-content: center;
         align-items: center;
         position: relative;
-        background-color: red;
+        background-color: gray;
         background: url(${conceptBg}) no-repeat center/cover;
     }
 
@@ -20,12 +20,16 @@ const ConceptStyle = styled.div`
         width: 80%;
         height: 100%;
         display: flex;
-        /* background-color: orange; */
+        /* background-color: darkgoldenrod; */
         justify-content: space-between;
-    }
-
-    .intro_text {
-        color: white;
+        .container1_intro_text {
+            color: white;
+            .headline {
+                font-family: 'Anton', sans-serif;
+                font-size: 4.8vw;
+            }
+        }
+        padding: 6vw 0;
     }
 
 `
@@ -34,10 +38,13 @@ function Concept () {
     return (
         <>
             <ConceptStyle>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
                 <div className="concept_container1">
                     <div className="container1_intro">
-                        <div className="intro_text">
-                            <p>WELCOME TO THE<br/> PIRATESDAO</p>
+                        <div className="container1_intro_text">
+                            <div className="headline">WELCOME TO THE<br/> PIRATESDAO</div>
                             <p>
                             PiratesDAO는 클레이튼 체인 위에 살고 있는<br /> 
                             10000개의 대체 불가능한 토큰입니다.<br />
