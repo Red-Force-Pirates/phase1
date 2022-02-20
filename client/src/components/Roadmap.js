@@ -10,7 +10,7 @@ const RoadmapStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 104%;
     position: relative;
   }
 
@@ -21,6 +21,7 @@ const RoadmapStyle = styled.div`
     color: white;
     background-color: darkgreen;
     background: url(${roadmap}) no-repeat center/cover;
+    margin-left: -10px;
   }
 
   /* 캐러셀 */
