@@ -30,7 +30,7 @@ const ConceptStyle = styled.div`
                     font-size: 72px;
                     font-family: 'Anton', sans-serif;
                 }
-                .c1_body {
+                .c1_text {
                     font-size: 1.6vw;
                 }
             }
@@ -69,7 +69,7 @@ const ConceptStyle = styled.div`
 
         .c2_body {
             line-height: 24px;
-            font-size: 1.6vw;
+            font-size: 18px;
         }
 
         .concept_container2_img {
@@ -88,6 +88,7 @@ const ConceptStyle = styled.div`
 
     /* 반응형 */
     @media (max-width: 768px) {
+        /* 컨테이너 1 */
         span {
             display: block;
         }
@@ -103,14 +104,30 @@ const ConceptStyle = styled.div`
                 height: 100%;
             }
         }
-
-        .concept_container2 {
-            display: block;
-        }
-
-        .c1_text {
+        .c1_body {
             font-size: 3vw;
         }
+
+        /* 컨테이너 2 */
+        .concept_container2 {
+            display: block;
+            .concept_container2_intro {
+                display: flex;
+                width: auto;
+                border: none;
+                .c2_headline {
+                    font-size: 48px;
+                    padding-top: 20px;
+                }
+                /* .c2_body {
+                    font-size: 18px;
+                } */
+            }
+            .concept_container2_img {
+                width: auto;
+            }
+        }
+        
     }
 `
 
@@ -125,16 +142,16 @@ function Concept () {
                     <div className="container1_intro">
                         <div className="container1_intro_text">
                             <div className="c1_headline">WELCOME TO THE<br/> PIRATESDAO</div>
-                            <div className="c1_body">
-                                <p className="c1_text">
-                                PiratesDAO는 클레이튼 체인 위에 살고 있는<br />
-                                10000개의 대체 불가능한 토큰입니다.<br />
-                                각각의 고양이들은 200여개의 독특한 파트들로 구성되어<br />
-                                세상에 오직 하나만 존재하는 특별한 수집품입니다.<br />
-                                <br />
-                                또한 www.piratesdao.org에서 프로필로 사용할 수 있으며<br />
-                                앞으로 추가될 소셜네트워크, 캘린더, 시즌 랭킹 시스템,<br />
-                                디파이, 게임 등의 기능들을 사용할 수 있습니다.<br />
+                            <div className="c1_text">
+                                <p className="c1_body">
+                                    PiratesDAO는 클레이튼 체인 위에 살고 있는<br />
+                                    10000개의 대체 불가능한 토큰입니다.<br />
+                                    각각의 고양이들은 200여개의 독특한 파트들로 구성되어<br />
+                                    세상에 오직 하나만 존재하는 특별한 수집품입니다.<br />
+                                    <br />
+                                    또한 www.piratesdao.org에서 프로필로 사용할 수 있으며<br />
+                                    앞으로 추가될 소셜네트워크, 캘린더, 시즌 랭킹 시스템,<br />
+                                    디파이, 게임 등의 기능들을 사용할 수 있습니다.<br />
                                 </p>
                             </div>
                         </div>
