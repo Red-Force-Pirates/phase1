@@ -44,8 +44,10 @@ const ConceptStyle = styled.div`
             }
         }
 
+    /* container 2 */
     .concept_container2 {
-        border: solid 1px white;
+        border-top: solid 1px white;
+        border-bottom: solid 1px white;
         color: white;
         display: flex;
         flex-direction: row-reverse;
@@ -85,13 +87,40 @@ const ConceptStyle = styled.div`
         }
     }
 
+    /* container 3 */
+    .concept_container3 {
+        border-bottom: solid 1px white;
+        padding: 4vw 8vh;
+        .concept_container3_title {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 72px;
+        }
+        .concept_container3_contents {
+            color: white;
+            padding-top: 2vw;
+            .c3_text {
+                font-size: 48px;
+                display: flex;
+                justify-content: space-around;
+            }
+            .c3_headline {
+                font-family: 'Anton', sans-serif;
+                font-size: 48px;
+            }
+            .c3_body {
+                padding-top: 1vw;
+                font-size: 20px;
+            }
+        }
+        
+    }
 
     /* 반응형 */
     @media (max-width: 768px) {
         /* 컨테이너 1 */
-        span {
-            display: block;
-        }
         .container1_intro {
             display: block;
         }
@@ -125,6 +154,24 @@ const ConceptStyle = styled.div`
             }
             .concept_container2_img {
                 width: auto;
+            }
+        }
+
+        /* 컨테이너 3 */
+        .concept_container3 {
+            .c3_title {
+                font-size: 24px;
+            }
+            .concept_container3_contents {
+                .c3_text {
+                    display: block;
+                    .c3_headline {
+                        font-size: 40px;
+                    }
+                    .c3_body {
+                        font-size: 20px;
+                    }
+                }
             }
         }
         
@@ -179,6 +226,23 @@ function Concept () {
                     </div>
                     <div className="concept_container2_img">
                         <img className="cat1_img" alt="main" src={catsample1}></img>
+                    </div>
+                </div>
+                <div className="concept_container3">
+                    <div className="concept_container3_title">
+                        <div className="c3_title">GET A PIRATE CAT ON OPENSEA</div>
+                    </div>
+                    <div className="concept_container3_contents">
+                        <div className="c3_text">
+                            <div className="c3_headline">
+                                THE SPECS
+                            </div>
+                            <div className="c3_body">
+                            클레이튼 체인의 KIP-37에 증명되었으며 이미지는 IPFS에 호스팅 되었습니다.<br /><br />
+                            컨트랙트 주소: (공개예정)<br /><br />
+                            고양이 해적의 민팅 가격은 개당 35Klay 입니다.<br />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </ConceptStyle>
