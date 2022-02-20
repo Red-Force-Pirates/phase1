@@ -90,7 +90,7 @@ const RoadmapStyle = styled.div`
   .phase_concept {
     display: flex;
     padding: 6vw 8vw 1vw 8vw;
-    font-size: 1.4vw;
+    font-size: 2vw;
     line-height: 1.4;
     justify-content: center;
   }
@@ -129,10 +129,10 @@ const RoadmapStyle = styled.div`
       font-size: 4vw;
     }
     .phase_headline {
-      font-size: 2.8vw;
+      font-size: 3vw;
     }
     .phase_concept {
-      font-size: 2.8vw;
+      font-size: 3.6vw;
       display: block;
     }
     .concept_head {
@@ -183,7 +183,7 @@ function Roadmap() {
               </div>
               <div className="phase_item">
                 <ul className="item_list">
-                  Click each Item.
+                  This Phase main concept.
                   <li className="idea_item">'병에 든 쪽지'</li>
                   <li className="idea_item">'수배서'</li>
                   <li className="slide_next">Slide next Phase ➸</li>
@@ -197,7 +197,7 @@ function Roadmap() {
               </div>
               <div className="phase_item">
                 <ul className="item_list">
-                  Click each Item.
+                  This Phase main concept.
                   <li className="idea_item">'선술집(TAVERN)'</li>
                   <li className="idea_item">'해도(Sea Map)'</li>
                   <li className="slide_next">Slide to next Phase ➸</li>
