@@ -118,6 +118,41 @@ const ConceptStyle = styled.div`
         
     }
 
+    .concept_container4 {
+        border-bottom: solid 1px white;
+        padding: 4vw 8vh;
+        .concept_container4_contents {
+            color: white;
+            padding-top: 2vw;
+            .c4_text {
+                font-size: 48px;
+                display: flex;
+                justify-content: space-around;
+            }
+            .c4_headline {
+                font-family: 'Anton', sans-serif;
+                font-size: 48px;
+                padding-right: 0px;
+                padding-bottom: 20px;
+            }
+            .c4_feature {
+                .c4_body {
+                    padding: 2vw 0;
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+                .c4_body_head {
+                    font-size: 32px;
+                    color: #36F217;
+                    font-family: 'Rock Salt', cursive;
+                    padding-bottom: 40px;
+                }
+            }
+        }
+        
+    }
+        
+
     /* 반응형 */
     @media (max-width: 768px) {
         /* 컨테이너 1 */
@@ -174,7 +209,24 @@ const ConceptStyle = styled.div`
                 }
             }
         }
-        
+
+        /* 컨테이너 4 */
+        .concept_container4 {
+            .c4_title {
+                font-size: 24px;
+            }
+            .concept_container4_contents {
+                .c4_text {
+                    display: block;
+                    .c4_headline {
+                        font-size: 40px;
+                    }
+                    .c4_body {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
     }
 `
 
@@ -241,6 +293,66 @@ function Concept () {
                             클레이튼 체인의 KIP-37에 증명되었으며 이미지는 IPFS에 호스팅 되었습니다.<br /><br />
                             컨트랙트 주소: (공개예정)<br /><br />
                             고양이 해적의 민팅 가격은 개당 35Klay 입니다.<br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="concept_container4">
+                    <div className="concept_container4_contents">
+                        <div className="c4_text">
+                            <div className="c4_headline">
+                                FEATURES
+                            </div>
+                            <div className="c4_feature">
+                                <div className="c4_body">
+                                    <div className="c4_body_head">A Note In A Bottle</div>
+                                        병속의 든 쪽지는 PIRATESDAO에서 화폐처럼 사용되는 매우 특별한 NFT 자산입니다.<br />
+                                        해적들은 정보를 공유하며 커뮤니티와 해적 브랜드에 가치를 증가시킵니다.<br />
+                                        <br />
+                                        해적들의 대화가 가치가 있을수록 신규 유저들은 정보를 얻기 위해 유입될 것이며<br />
+                                        신규 유저들은 병속에 든 쪽지를 구입하여야만 게시판과 달력 기능을 사용할 수 있습니다.<br />
+                                        <br />
+                                        이렇게 판매된 쪽지의 수익은 정보를 공유하여 커뮤니티에 기여한<br />
+                                        <b>해적들에게 보상으로 돌아가며 커뮤니티의 생태계는 선순환</b>을 일으킵니다.<br />
+                                </div>
+                                <div className="c4_body">
+                                    <div className="c4_body_head">Sea Map</div>
+                                        Sea Map(해도)은 nft 프로젝트 일정을 등록할 수 있는 캘린더 기능입니다.<br />
+                                        해적들에게 다음 보물섬이 어디에 있는지 알려주는 보물 지도와 같습니다. <br />
+                                        <br />
+                                        해적들은 새로운 프로젝트들의 일정 정보를 달력을 통해 공유하며<br />
+                                        커뮤니티의 가치를 만들어냅니다. 그리고 그 댓가로 DAO로 부터 물질적 보상과 후원을 받습니다.<br />
+                                </div>
+                                <div className="c4_body">
+                                    <div className="c4_body_head">Vault</div>
+                                    Vault(보물금고)에선 PiratesDAO가 벌어들이는 수익을 확인할 수 있습니다.<br />
+                                    이곳에 저장된 유무형의 가치들은 NFT 홀더들에게 분배 됩니다.<br />
+                                </div>
+                                <div className="c4_body">
+                                    <div className="c4_body_head">Tavern</div>
+                                        Tavern(선술집)에는 두가지 메인 기능이 존재합니다.<br />
+                                        첫째, NFT 프로젝트들에 대한 의견과 뉴스를 공유합니다.<br />
+                                        대상의 가치에 대해 토론하고 관점을 제시하여 집단 지성을 이룹니다.<br />
+                                        <br />
+                                        둘째, 해적들은 자신의 위대함을 증명하기 위해 수익을 공개합니다.<br />
+                                        이를 통해 해적은 자신의 등급과 명성을 올려 상위 랭크에 오르게 됩니다.<br />
+                                        <br />
+                                        Tavern을 통해 자신의 분석을 공유함으로써 다른 해적들에게 이익을 주고,<br />
+                                        DAO로 부터 더 많은 보상을 받게 됩니다.
+                                </div>
+                                <div className="c4_body">
+                                    <div className="c4_body_head">Bounty</div>
+                                        Bounty(현상금)은 랭킹을 의미합니다.<br />
+                                        수익을 올린 해적들은 자신의 명성을 수익 공개를 통해 올릴 수 있습니다.<br />
+                                        이와 같은 행위는 다른 해적들에게 귀감이 되며<br />
+                                        그들의 공유하는 정보들을 신뢰하는데에 도움이 됩니다.<br />
+                                        <br />
+                                        경쟁 시스템은 이러한 행위를 촉진하고<br />
+                                        보상을 지급할때 기준으로 삼습니다.<br />
+                                        <br />
+                                        블록체인은 모든 것을 기록합니다. <br />
+                                        당신의 역사를 서사로 만드십시오.<br />
+                                </div>
                             </div>
                         </div>
                     </div>
