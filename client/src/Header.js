@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from "styled-components";
 import logo from "../src/assets/img/logo.png"
-import { useEffect, useState } from 'react';
 
 
 const HeaderNav = styled.div`
@@ -20,8 +19,7 @@ const HeaderNav = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background-color: black; */
-    /* position: relative; */
+    padding-left: 4vw;
   }
 
   li {
@@ -30,7 +28,7 @@ const HeaderNav = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-around;
-      font-size: 16px;
+      font-size: 1.2vw;
   }
 
   p {
@@ -132,7 +130,7 @@ const HeaderNav = styled.div`
     /* background-color: cadetblue; */
     position: fixed;
     top: 40px;
-    right: 20px;
+    right: 40px;
     width: 100px;
     height: 200px;
     display: block;
@@ -183,11 +181,13 @@ const Header = () => {
               <ul>
                 <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
                 <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
-                <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
+                <li><NavLink to="/concept" ><p>CONCEPT</p></NavLink></li>
                 {/* <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li> */}
                 {/* <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li> */}
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>
-                <li><NavLink to="/tavern/page/1" ><p>TAVERN</p></NavLink></li>
+                <li><NavLink to="/crew" ><p>CREW</p></NavLink></li>
+                {/* <li><NavLink to="/tavern" ><p>TAVERN</p></NavLink></li> */}
+                {/* <li><NavLink to="/tavern/page/1" ><p>TAVERN</p></NavLink></li> */}
                 {/* <li><NavLink to="/item" ><p>ITEM</p></NavLink></li> */}
                 {/* 햄버거메뉴 */}
                 <button onClick={handleClick} className="Burger">
@@ -203,8 +203,9 @@ const Header = () => {
                   </button>
                   <ul className="sideUl">
                     <div onClick={handleClick} className="sideList"><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></div>
-                    <div onClick={handleClick} className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/concept" ><p>CONCEPT</p></NavLink></div>
                     <div onClick={handleClick} className="sideList"><NavLink to="/vault" ><p>VAULT</p></NavLink></div>
+                    <div onClick={handleClick} className="sideList"><NavLink to="/crew" ><p>CREW</p></NavLink></div>
                   </ul>
                 </div>
               </ul>
