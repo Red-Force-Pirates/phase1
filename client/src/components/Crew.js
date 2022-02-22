@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { Avatar, Button, Grid, Paper, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
-
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
+import { Avatar, Button, Grid, Paper } from '@mui/material';
 
 import styledcompoent from 'styled-components';
 import { styled } from '@mui/material/styles';
@@ -11,7 +8,7 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor:"black",
   color: "white", 
   width: "100%", 
-  border: "2px solid white", 
+  border: "1px solid white", 
   ...theme.typography.body2,
   display:"flex" , 
   textAlign: 'center',
@@ -28,10 +25,11 @@ const CrewContainer = styled(Grid)(({ theme }) => ({
 const StyledAvatar = styled(Avatar)(() => ({
   position: "relative", 
   top: "1rem", 
-  border: "7px solid white", 
+  border: "4px solid white", 
   width: "8rem", 
   height: "8rem"
 }));
+
 
 const ContainerStyle = styledcompoent.div`
    .container{
@@ -70,6 +68,13 @@ const ContainerStyle = styledcompoent.div`
     display: inline-block;
     font-size: 1.2rem;
     margin: 20px;
+  }
+  
+  .crewFollow {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 20px;
+    cursor: pointer;
   }
 
   .crewContent {
@@ -110,8 +115,6 @@ const Test = () => {
             “그 누구도 막을 수 없게 될 거요···!!! 
             <br/>
             폭주하는 이 시대를!!!”
-            <br/>
-            3줄은 ㄱㅊ?
           </Item>
           <Item sx={crewFooterContainer} square >
             
@@ -119,7 +122,7 @@ const Test = () => {
               <div className='crewFooterContent'>
                 @Dogedoil
               </div>
-              <div className='crewFooterContent'>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Dogedoils/')}>
                 follow
               </div>
             </div>
@@ -130,18 +133,14 @@ const Test = () => {
             <StyledAvatar src="/img/crewprofile/benbeckat.jpg"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
-            rapper
+            vice-captain
             <br/>
             ben beckat#0002
           </Item>
           <Item className='crewContent' square >
-            “그 누구도 막을 수 없게 될 거요···!!! 
-            <br/>
-            폭주하는 이 시대를!!!”
-            <br/>
-            3줄은 ㄱㅊ?
-            <br/>
-            3줄까지만
+          “우리랑 한판 뜨고 싶다면 
+          <br/>
+          군함이라도 끌고 와라”
           </Item>
           <Item sx={crewFooterContainer} square >
             
@@ -149,7 +148,7 @@ const Test = () => {
               <div className='crewFooterContent'>
                 @Jhin_93
               </div>
-              <div className='crewFooterContent'>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Jhin_93/')}>
                 follow
               </div>
             </div>
@@ -160,7 +159,7 @@ const Test = () => {
             <StyledAvatar src="/img/crewprofile/woogi.jpg"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
-            winboong
+            ship-doctor
             <br/>
             woogi#0003
           </Item>
@@ -173,9 +172,9 @@ const Test = () => {
             
             <div className='crewFooter'>
               <div className='crewFooterContent'>
-                @Dogedoil
+                @Seongwook9
               </div>
-              <div className='crewFooterContent'>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Seongwook9')}>
                 follow
               </div>
             </div>
@@ -186,9 +185,35 @@ const Test = () => {
             <StyledAvatar src="/img/1.png"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
-            winboong
+            chef
             <br/>
-            wonny#0004
+            seungjae#0004
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @Seongwook9
+              </div>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Seongwook9')}>
+                follow
+              </div>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            engineer
+            <br/>
+            wonny#0005
           </Item>
           <Item className='crewContent' square >
             “그 누구도 막을 수 없게 될 거요···!!! 
@@ -201,7 +226,7 @@ const Test = () => {
               <div className='crewFooterContent'>
                 @Dogedoil
               </div>
-              <div className='crewFooterContent'>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Seongwook9')}>
                 follow
               </div>
             </div>
@@ -212,9 +237,62 @@ const Test = () => {
             <StyledAvatar src="/img/1.png"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
-            winboong
+            helmsman
             <br/>
-            jingbe#0005
+            polly#0006
+          </Item>
+          <Item className='crewContent' square >
+            “깨지고 부서져라...!!
+            <br/>
+            그것이 해적이니까...” (끄덕)
+            <br/>
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @PDAO_Polly
+              </div>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/PDAO_Polly')}>
+                follow
+              </div>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            archeologist
+            <br/>
+            sky#0007
+          </Item>
+          <Item className='crewContent' square >
+            “그 누구도 막을 수 없게 될 거요···!!! 
+            <br/>
+            폭주하는 이 시대를!!!”
+          </Item>
+          <Item sx={crewFooterContainer} square >
+            
+            <div className='crewFooter'>
+              <div className='crewFooterContent'>
+                @sky_suh
+              </div>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/sky_suh')}>
+                follow
+              </div>
+            </div>
+          </Item>
+        </CrewContainer>
+        <CrewContainer>
+          <Item className='pfpContainer' square >
+            <StyledAvatar src="/img/1.png"></StyledAvatar>
+          </Item>
+          <Item className='crewHeader' square >
+            navigator
+            <br/>
+            design#0008
           </Item>
           <Item className='crewContent' square >
             “그 누구도 막을 수 없게 될 거요···!!! 
@@ -227,59 +305,7 @@ const Test = () => {
               <div className='crewFooterContent'>
                 @Dogedoil
               </div>
-              <div className='crewFooterContent'>
-                follow
-              </div>
-            </div>
-          </Item>
-        </CrewContainer>
-        <CrewContainer>
-          <Item className='pfpContainer' square >
-            <StyledAvatar src="/img/1.png"></StyledAvatar>
-          </Item>
-          <Item className='crewHeader' square >
-            winboong
-            <br/>
-            sky#0006
-          </Item>
-          <Item className='crewContent' square >
-            “그 누구도 막을 수 없게 될 거요···!!! 
-            <br/>
-            폭주하는 이 시대를!!!”
-          </Item>
-          <Item sx={crewFooterContainer} square >
-            
-            <div className='crewFooter'>
-              <div className='crewFooterContent'>
-                @Dogedoil
-              </div>
-              <div className='crewFooterContent'>
-                follow
-              </div>
-            </div>
-          </Item>
-        </CrewContainer>
-        <CrewContainer>
-          <Item className='pfpContainer' square >
-            <StyledAvatar src="/img/1.png"></StyledAvatar>
-          </Item>
-          <Item className='crewHeader' square >
-            designer
-            <br/>
-            design#0007
-          </Item>
-          <Item className='crewContent' square >
-            “그 누구도 막을 수 없게 될 거요···!!! 
-            <br/>
-            폭주하는 이 시대를!!!”
-          </Item>
-          <Item sx={crewFooterContainer} square >
-            
-            <div className='crewFooter'>
-              <div className='crewFooterContent'>
-                @Dogedoil
-              </div>
-              <div className='crewFooterContent'>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/sky_suh')}>
                 follow
               </div>
             </div>
