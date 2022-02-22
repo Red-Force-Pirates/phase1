@@ -1,7 +1,7 @@
 {
-    "host" : "54.180.117.235",
-    "user" : "admin",
-    "password" : "1234",
-    "database" : "project3_react",
+    "host" : "172.105.124.216",
+    "user" : "sky",
+    "password" : "!fkaus2Qkrtm",
+    "database" : "piratedb",
     "connectionLimit" : 100
 }

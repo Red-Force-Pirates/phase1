@@ -11,28 +11,28 @@ const mime = require('mime-types'); // upload 파일 타입 가져오기.  = 1
 const fs = require('fs');
 // Use Board  미들웨어 구분 End
 
-// Contents
-router.get('/contents', controllers.contents_Article_List);
-router.post('/contents/articles/comments', controllers.contents_Article_ReadComment);
-router.post('/contents/articles/addcomments', controllers.contents_Article_AddComment);
-router.delete('/contents/articles/comments/delete', controllers.contents_Article_DeleteComment);
+// // Contents
+// router.get('/contents', controllers.contents_Article_List);
+// router.post('/contents/articles/comments', controllers.contents_Article_ReadComment);
+// router.post('/contents/articles/addcomments', controllers.contents_Article_AddComment);
+// router.delete('/contents/articles/comments/delete', controllers.contents_Article_DeleteComment);
 
-// 로그인 라우터
-router.get('/login', controllers.getLogin)
-router.post('/onLogin', controllers.postLogin)
+// // 로그인 라우터
+// router.get('/login', controllers.getLogin)
+// router.post('/onLogin', controllers.postLogin)
 
-// 회원가입 라우터
-router.get('/register', controllers.getRegister)
-router.post('/onRegister', controllers.postRegister)
+// // 회원가입 라우터
+// router.get('/register', controllers.getRegister)
+// router.post('/onRegister', controllers.postRegister)
 
-// 재원 mypage router
-router.get("/api/get", controllers.getTodo_Controllers);
-router.post("/api/insert", controllers.postTodo_Controllers);
-router.delete("/api/delete/:title", controllers.deleteTodo_Controllers);
+// // 재원 mypage router
+// router.get("/api/get", controllers.getTodo_Controllers);
+// router.post("/api/insert", controllers.postTodo_Controllers);
+// router.delete("/api/delete/:title", controllers.deleteTodo_Controllers);
 
-router.get("/api/login", controllers.getLogin_Controllers);
-router.get("/api/test/get", controllers.getProfile_Controllers);
-router.put("/api/test/update", controllers.putProfile_Controllers);
+// router.get("/api/login", controllers.getLogin_Controllers);
+// router.get("/api/test/get", controllers.getProfile_Controllers);
+// router.put("/api/test/update", controllers.putProfile_Controllers);
 
 
 // Use Board 이미지 업로드용 폴더 체크 없으면 생성 Start
@@ -58,10 +58,17 @@ const upload = multer({
 // Use Board 이미지 업로드 변수 생성 (경로.형식.네이밍) End
 
 // Board
-router.get('/board/get', controllers.board_List_Controllers);
+router.get('/board', controllers.board_List_Controllers);
 router.get('/board/detail/:id', controllers.board_Detail_Controllers);
 router.post('/board/Insert', upload.single('image'), controllers.board_Insert_Controllers);
-router.post('/board/ImageUpload', upload.single('image'), controllers.board_Upload_Controllers);
+// router.post('/board/ImageUpload', upload.single('image'), controllers.board_Upload_Controllers);
+router.put('/board/update', controllers.board_Update_Controllers);
 router.delete('/board/delete/:id', controllers.board_Delete_Controllers);
+
+router.get('/comment/get', controllers.comment_List_Controllers);
+router.get('/comment/like', controllers.comment_Like_Controllers);
+router.post('/comment/insert', upload.single('image'), controllers.comment_Insert_Controllers);
+router.put('/comment/update', controllers.comment_Update_Controllers);
+router.get('/comment/delete', controllers.comment_Delete_Controllers);
 
 module.exports = router;

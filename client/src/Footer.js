@@ -4,6 +4,7 @@ import twit from "../src/assets/img/twit.png"
 import disc from "../src/assets/img/disc.png"
 import inst from "../src/assets/img/inst.png"
 import tele from "../src/assets/img/tele.png"
+import kakao from "../src/assets/img/kakao.png"
 
 const Foot = styled.div`
     
@@ -14,14 +15,16 @@ const Foot = styled.div`
 
     /* fContainer1 */
     .fContainer {
-        background-color: black;
+        /* background-color: gray; */
         vertical-align: middle;
         display: flex;
         align-items: center;
         position: relative;
+        /* position: absolute; */
         margin-top: 30px;
+        margin-bottom: 30px;
         color: white;
-        font-size: 8px;
+        font-size: 1vw;
         line-height: 16px;
         font-family: 'Walter Turncoat', cursive;
         align-items: flex-start;
@@ -49,13 +52,20 @@ const Foot = styled.div`
     
     /* LEFT */
     .fContainer_left_content {
-        margin-right: 40px;
+        margin-right: 30px;
     }
 
     /* RIGHT */
+    .fContainer_right {
+        padding-top: 10px;
+    }
+
     .imgSection {
         display: flex;
         justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        
     }
 
     .snsText{
@@ -63,9 +73,8 @@ const Foot = styled.div`
     }
 
     .img_box {
-        padding-top: 20%;
-        /* margin-right: 20%; */
-        padding-left: 20%;
+        padding-top: 5%;
+        padding-left: 20px;
     }
 
     .sns_logo{
@@ -79,6 +88,13 @@ const Foot = styled.div`
     font-family: 'Roboto', sans-serif;
     font-family: 'Rock Salt', cursive;
     font-family: 'Walter Turncoat', cursive;
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+        .fContainer {
+            display: block;
+        }
+    }
 `
 
 const Footer = () => (
@@ -91,53 +107,56 @@ const Footer = () => (
             <div className="fContainer_left">
                 <div className="fContainer_left_content">
                     PIRATES DAO.<br />
-                    THE KLAYTN NETWORK'S FIRST<br />
-                    COMMUNITY FOR COLLECTIBLES<br />
+                    THE KLAYTN NETWORK'S FIRST
+                    COMMUNITY FOR COLLECTIBLES
                     AND NON-FUNGIBLE TOKEN TRADERS.<br />
-                    SHARE YOUR JOY WITH GREAT PIRATES<br />
+                    SHARE YOUR JOY WITH GREAT PIRATES.<br />
                 </div>
-                <div className="fContainer_left_content">
+                {/* <div className="fContainer_left_content">
                     <a href='/'>SUGGESTIONS</a><br />
                     <a href='/'>DISCORD COMMUNITY</a><br />
                     <a href='/'>BLOG</a><br />
                     <a href='/'>DOCS</a><br />
                     <a href='/'>NEWSLETTER</a>
-                </div>
-                <div className="fContainer_left_content">
+                </div> */}
+                {/* <div className="fContainer_left_content">
                     <a href='/'>RESOURCES</a><br />
                     <a href='/'>HELP CENTER</a><br />
                     <a href='/'>PLATFORM STATUS</a><br />
                     <a href='/'>PARTNERS</a><br />
                     <a href='/'>GAS-FREE MARKETPLACE</a>
-                </div>
-                <div className="fContainer_left_content">
+                </div> */}
+                {/* <div className="fContainer_left_content">
                     <a href='/'>COMPANY</a><br />
                     <a href='/'>ABOUT</a><br />
                     <a href='/'>CAREERS</a><br />
-                </div>
+                </div> */}
             </div>
             <div className="fContainer_right">
                 <div className="fContainer_right_content">
                     <div className="snsText">Join the COMMUNITY</div>
                     <div className="imgSection">
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="twit" className="sns_logo" src={twit}></img></a>
+                            <a href="https://twitter.com/DaoPirates" target="blank"><img alt="twit" className="sns_logo" src={twit}></img></a>
                         </div>
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="disc" className="sns_logo" src={disc}></img></a>
+                            <a href="https://discord.com/invite/Nd6xU3bN" target="blank"><img alt="disc" className="sns_logo" src={disc}></img></a>
                         </div>
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="inst" className="sns_logo" src={inst}></img></a>
+                            <a href="https://www.instagram.com/piratesdao/" target="blank"><img alt="inst" className="sns_logo" src={inst}></img></a>
                         </div>
                         <div className="img_box">
-                            <a href="https://google.com" target="blank"><img alt="tele" className="sns_logo" src={tele}></img></a>
+                            <a href="https://t.me/piratesdao" target="blank"><img alt="tele" className="sns_logo" src={tele}></img></a>
+                        </div>
+                        <div className="img_box">
+                            <a href="https://open.kakao.com/o/gzAIhHXd" target="blank"><img alt="kakao" className="sns_logo" src={kakao}></img></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div className="fContainer">
-            <div className="footer-logo">2018 - 2021 PIRATES DAO</div>
+            <div className="footer-logo">2021 - 2022 PIRATES DAO</div>
             <div className="footer-logo">INC PRIVACY POLICY TERMS OF SERVICE</div>
         </div>
     </Foot>
