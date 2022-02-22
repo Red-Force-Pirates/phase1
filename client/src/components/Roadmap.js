@@ -10,7 +10,7 @@ const RoadmapStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 105%;
+    width: 100%;
     position: relative;
   }
 
