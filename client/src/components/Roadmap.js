@@ -10,7 +10,7 @@ const RoadmapStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 104%;
+    width: 105%;
     position: relative;
   }
 
@@ -149,13 +149,26 @@ const RoadmapStyle = styled.div`
 
 `
 
+function HideArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
 function Roadmap() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    nextArrow: <HideArrow />,
+    prevArrow: <HideArrow />
   };
   return (
     <>
