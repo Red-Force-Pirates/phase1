@@ -182,7 +182,7 @@ const Test = () => {
         </CrewContainer>
         <CrewContainer>
           <Item className='pfpContainer' square >
-            <StyledAvatar src="/img/1.png"></StyledAvatar>
+            <StyledAvatar src="/img/61.png"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
             chef
@@ -197,10 +197,10 @@ const Test = () => {
           <Item sx={crewFooterContainer} square >
             
             <div className='crewFooter'>
-              <div className='crewFooterContent'>
+              {/* <div className='crewFooterContent'>
                 @Seongwook9
-              </div>
-              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Seongwook9')}>
+              </div> */}
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/DaoPirates')}>
                 follow
               </div>
             </div>
@@ -208,7 +208,7 @@ const Test = () => {
         </CrewContainer>
         <CrewContainer>
           <Item className='pfpContainer' square >
-            <StyledAvatar src="/img/1.png"></StyledAvatar>
+            <StyledAvatar src="/img/2.png"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
             engineer
@@ -216,17 +216,16 @@ const Test = () => {
             wonny#0005
           </Item>
           <Item className='crewContent' square >
-            “그 누구도 막을 수 없게 될 거요···!!! 
-            <br/>
-            폭주하는 이 시대를!!!”
+            "응~ NFT로 미래 대비하면 그만이야~""
           </Item>
           <Item sx={crewFooterContainer} square >
             
             <div className='crewFooter'>
               <div className='crewFooterContent'>
-                @Dogedoil
+                @JaeWonK<br />
+                50350849
               </div>
-              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/Seongwook9')}>
+              <div className='crewFollow' onClick={()=>window.open('https://twitter.com/JaeWonK50350849')}>
                 follow
               </div>
             </div>
@@ -234,7 +233,7 @@ const Test = () => {
         </CrewContainer>
         <CrewContainer>
           <Item className='pfpContainer' square >
-            <StyledAvatar src="/img/1.png"></StyledAvatar>
+            <StyledAvatar src="/img/6.png"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
             helmsman
@@ -261,7 +260,7 @@ const Test = () => {
         </CrewContainer>
         <CrewContainer>
           <Item className='pfpContainer' square >
-            <StyledAvatar src="/img/1.png"></StyledAvatar>
+            <StyledAvatar src="/img/9.png"></StyledAvatar>
           </Item>
           <Item className='crewHeader' square >
             archeologist
@@ -269,9 +268,9 @@ const Test = () => {
             sky#0007
           </Item>
           <Item className='crewContent' square >
-            “그 누구도 막을 수 없게 될 거요···!!! 
+            “삼천 세계의 검으로 
             <br/>
-            폭주하는 이 시대를!!!”
+            이 시대의 합일을 이루어내겠다!!!”
           </Item>
           <Item sx={crewFooterContainer} square >
             
@@ -285,7 +284,7 @@ const Test = () => {
             </div>
           </Item>
         </CrewContainer>
-        <CrewContainer>
+        {/* <CrewContainer>
           <Item className='pfpContainer' square >
             <StyledAvatar src="/img/1.png"></StyledAvatar>
           </Item>
@@ -310,7 +309,7 @@ const Test = () => {
               </div>
             </div>
           </Item>
-        </CrewContainer>
+        </CrewContainer> */}
       </Grid>
   )
 }
