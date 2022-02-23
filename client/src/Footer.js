@@ -15,14 +15,16 @@ const Foot = styled.div`
 
     /* fContainer1 */
     .fContainer {
-        background-color: black;
+        /* background-color: gray; */
         vertical-align: middle;
         display: flex;
         align-items: center;
         position: relative;
+        /* position: absolute; */
         margin-top: 30px;
+        margin-bottom: 30px;
         color: white;
-        font-size: 8px;
+        font-size: 1vw;
         line-height: 16px;
         font-family: 'Walter Turncoat', cursive;
         align-items: flex-start;
@@ -50,10 +52,14 @@ const Foot = styled.div`
     
     /* LEFT */
     .fContainer_left_content {
-        margin-right: 40px;
+        margin-right: 30px;
     }
 
     /* RIGHT */
+    .fContainer_right {
+        padding-top: 10px;
+    }
+
     .imgSection {
         display: flex;
         justify-content: flex-end;
@@ -104,7 +110,7 @@ const Footer = () => (
                     THE KLAYTN NETWORK'S FIRST
                     COMMUNITY FOR COLLECTIBLES
                     AND NON-FUNGIBLE TOKEN TRADERS.<br />
-                    SHARE YOUR JOY WITH GREAT PIRATES<br />
+                    SHARE YOUR JOY WITH GREAT PIRATES.<br />
                 </div>
                 {/* <div className="fContainer_left_content">
                     <a href='/'>SUGGESTIONS</a><br />

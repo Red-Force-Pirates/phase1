@@ -46,7 +46,7 @@ const VaultStyle = styled.div`
   .mainText {
     margin-left: 10%;
     color: white;
-    font-size: 4.5rem;
+    font-size: 4.5vw;
     font-weight: bold;
     cursor: pointer;
     /* background-color: red; */
@@ -65,7 +65,7 @@ const VaultStyle = styled.div`
   .mainVault {
       margin-left: 10%;
       color: white;
-      font-size: 8.5rem;
+      font-size: 8.5vw;
       font-weight: bold;
       cursor: pointer;
       /* background-color: blue; */
@@ -85,6 +85,7 @@ export default function Vault() {
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
                 <div className="container">
+                  <img src=""/>
                     <div className="mainContent">
                       <TemporaryDrawer />
                     </div>
