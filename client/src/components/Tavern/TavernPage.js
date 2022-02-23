@@ -15,7 +15,7 @@ import { Box } from '@mui/system';
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    height: 50,
+    height: "3.12rem",
     '&:hover': {
       background: grey[800],
    },
@@ -52,14 +52,16 @@ export default function TavernPage() {
   const [inputData, setInputData] = useState(testArr);
 
 
-//   const callApi = async() => {
-//     const response = await axios.get("http://localhost:3001/board")
-//     setInputData([...inputData,...response.data])
-//   }
+  const callApi = async() => {
+    const response = await axios.get("http://localhost:3001/board");
+    console.log("response : ");
+    console.log(response.data);
+    setInputData([...inputData,...response.data])
+  }
   
-//   useEffect(() => {
-//     callApi();
-//   },[]);
+  useEffect(() => {
+    callApi();
+  },[]);
 
   const Paging = () => {
     const [page, setPage] = useState(parseInt(params.page));
@@ -114,7 +116,7 @@ export default function TavernPage() {
     <>
     <Paper sx={{  maxWidth: "80%", margin: "auto" }}>
       <br />
-      <TableContainer sx={{ minHeight: 536.528, maxWidth: "98%", margin: "auto" }}>
+      <TableContainer sx={{ minHeight: "35rem", maxWidth: "98%", margin: "auto" }}>
         <Table size="small" sx={{ maxWidth: "98%", margin: "auto", backgroundColor: "black"}} aria-label="simple table">
           <TableHead sx={{ backgroundColor: "white" }}>
             <TableRow >
