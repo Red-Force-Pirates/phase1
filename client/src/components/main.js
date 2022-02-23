@@ -5,23 +5,6 @@ import styled from 'styled-components';
 
 const MainStory = styled.div`
 
-  .project_intro {
-    text-align: center;
-    font-family: 'Gowun Batang', serif;
-    font-size: 2vw;
-    padding: 20px 0px;
-    color: white;
-  }
-  
-  .phase_v {
-    position: absolute;
-    top: 10;
-    font-size: 6vw;
-    color: white;
-    text-align: center;
-    font-family: 'Rock Salt', cursive;
-  }
-
   .container_main{
     display: flex;
     justify-content: center;
@@ -29,11 +12,26 @@ const MainStory = styled.div`
     width: 100%;
     position: relative;
     background-color: black;
+    .phase_v {
+      position: absolute;
+      top: 36px;
+      font-size: 8vw;
+      color: white;
+      text-align: center;
+      font-family: 'Anton', sans-serif;
+      text-decoration: none;
+    }
+    .mainImg_main {
+      width: 100%;
+    }
   }
 
-  .mainImg_main {
-    width: 80%;
-  }
+  /* 반응형 */
+  @media (max-width: 768px) {
+      .project_intro {
+        font-size: 6vw;
+      }
+    }
 `;
 
 
@@ -42,12 +40,11 @@ function Home() {
   return (
     <>
       <MainStory >
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
-        <div className="project_intro">Klaytn 탈중앙화 커뮤니티 Pirates DAO.</div>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
         <div className="container_main">
-          <div className="phase_v">Phase 0.</div>
+          <a href="/roadmap" className="phase_v">WELCOME TO PIRATESDAO</a>
           <img className="mainImg_main" alt="main" src={main}></img>
         </div>
       </MainStory>
