@@ -24,11 +24,11 @@ const HeaderNav = styled.div`
 
   li {
       width: 100%;
-      height: 100%;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      font-size: 1.2vw;
+      font-size: 40px;
   }
 
   p {
@@ -41,8 +41,9 @@ const HeaderNav = styled.div`
   }
 
   /* 폰트 */
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Rock Salt', cursive;
+  /* font-family: 'Roboto', sans-serif;
+  font-family: 'Rock Salt', cursive; */
+  font-family: 'East Sea Dokdo', cursive;
 
   /* 로고 */
   .LogoImg {
@@ -140,6 +141,7 @@ const HeaderNav = styled.div`
     /* background-color: red; */
     width: 100px;
     height: 20%;
+    font-size: 30px;
   }
 
   /* 반응형 */
@@ -180,8 +182,8 @@ const Header = () => {
             <nav>
               <ul>
                 <NavLink to="/" ><img onClick={sideClose} alt="test" className="LogoImg" src={logo}/></NavLink>
+                <li><NavLink to="/intro" ><p>INTRO</p></NavLink></li>
                 <li><NavLink to="/roadmap" ><p>ROADMAP</p></NavLink></li>
-                <li><NavLink to="/concept" ><p>CONCEPT</p></NavLink></li>
                 {/* <li><NavLink to="/callendar" ><p>CALLENDAR</p></NavLink></li> */}
                 {/* <li><NavLink to="/bounty" ><p>BOUNTY</p></NavLink></li> */}
                 <li><NavLink to="/vault" ><p>VAULT</p></NavLink></li>

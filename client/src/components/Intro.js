@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import conceptBg from '../assets/img/conceptBg.png'
+import introBg from '../assets/img/introBg.png'
 import catsample4 from '../assets/img/catsample4.png'
 import catsample1 from '../assets/img/catsample1.png'
 
-const ConceptStyle = styled.div`
+const IntroStyle = styled.div`
     .blank {
         height: 24px;
     }
 
     /* container 1 */
-    .concept_container1{
+    .intro_container1{
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         background-color: gray;
-        background: url(${conceptBg}) no-repeat center/cover;
+        background: url(${introBg}) no-repeat center/cover;
     }
     .container1_intro {
             padding: 6vw 0;
@@ -48,13 +48,13 @@ const ConceptStyle = styled.div`
         }
 
     /* container 2 */
-    .concept_container2 {
+    .intro_container2 {
         border-top: solid 1px white;
         border-bottom: solid 1px white;
         color: white;
         display: flex;
         flex-direction: row-reverse;
-        .concept_container2_intro {
+        .intro_container2_intro {
             /* background-color: turquoise; */
             width: 60%;
             border-left: solid 1px white;
@@ -77,7 +77,7 @@ const ConceptStyle = styled.div`
             font-size: 18px;
         }
 
-        .concept_container2_img {
+        .intro_container2_img {
             /* background-color: tomato; */
             width: 40%;
             padding: 4vw 0px;
@@ -91,17 +91,17 @@ const ConceptStyle = styled.div`
     }
 
     /* container 3 */
-    .concept_container3 {
+    .intro_container3 {
         border-bottom: solid 1px white;
         padding: 4vw 8vh;
-        .concept_container3_title {
+        .intro_container3_title {
             background-color: white;
             display: flex;
             justify-content: center;
             font-family: 'Anton', sans-serif;
             font-size: 72px;
         }
-        .concept_container3_contents {
+        .intro_container3_contents {
             color: white;
             padding-top: 2vw;
             .c3_text {
@@ -122,10 +122,10 @@ const ConceptStyle = styled.div`
     }
 
     /* container 4 */
-    .concept_container4 {
+    .intro_container4 {
         border-bottom: solid 1px white;
         padding: 4vw 8vh;
-        .concept_container4_contents {
+        .intro_container4_contents {
             color: white;
             padding-top: 2vw;
             .c4_text {
@@ -180,9 +180,9 @@ const ConceptStyle = styled.div`
         }
 
         /* 컨테이너 2 */
-        .concept_container2 {
+        .intro_container2 {
             display: block;
-            .concept_container2_intro {
+            .intro_container2_intro {
                 display: flex;
                 width: auto;
                 border: none;
@@ -197,17 +197,17 @@ const ConceptStyle = styled.div`
                     display: none;
                 }
             }
-            .concept_container2_img {
+            .intro_container2_img {
                 width: auto;
             }
         }
 
         /* 컨테이너 3 */
-        .concept_container3 {
+        .intro_container3 {
             .c3_title {
                 font-size: 24px;
             }
-            .concept_container3_contents {
+            .intro_container3_contents {
                 .c3_text {
                     display: block;
                     .c3_headline {
@@ -221,11 +221,11 @@ const ConceptStyle = styled.div`
         }
 
         /* 컨테이너 4 */
-        .concept_container4 {
+        .intro_container4 {
             .c4_title {
                 font-size: 24px;
             }
-            .concept_container4_contents {
+            .intro_container4_contents {
                 .c4_text {
                     display: block;
                     .c4_headline {
@@ -243,14 +243,14 @@ const ConceptStyle = styled.div`
     }
 `
 
-function Concept () {
+function Intro () {
     return (
         <>
-            <ConceptStyle>
+            <IntroStyle>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
             <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
-                <div className="concept_container1">
+                <div className="intro_container1">
                     <div className="container1_intro">
                         <div className="container1_intro_text">
                             <div className="c1_headline">WELCOME TO THE<br/> PIRATESDAO</div>
@@ -272,8 +272,8 @@ function Concept () {
                         </div>
                     </div>
                 </div>
-                <div className="concept_container2">
-                    <div className="concept_container2_intro">
+                <div className="intro_container2">
+                    <div className="intro_container2_intro">
                         <div className="c2_text">
                             <div className="c2_headline">FAIR DISTRIBUTION</div>
                             <div className="c2_body">
@@ -288,15 +288,15 @@ function Concept () {
                             </div>
                         </div>
                     </div>
-                    <div className="concept_container2_img">
+                    <div className="intro_container2_img">
                         <img className="cat1_img" alt="main" src={catsample1}></img>
                     </div>
                 </div>
-                <div className="concept_container3">
-                    <div className="concept_container3_title">
+                <div className="intro_container3">
+                    <div className="intro_container3_title">
                         <div className="c3_title">GET A PIRATE CAT ON OPENSEA</div>
                     </div>
-                    <div className="concept_container3_contents">
+                    <div className="intro_container3_contents">
                         <div className="c3_text">
                             <div className="c3_headline">
                                 THE SPECS
@@ -309,8 +309,8 @@ function Concept () {
                         </div>
                     </div>
                 </div>
-                <div className="concept_container4">
-                    <div className="concept_container4_contents">
+                <div className="intro_container4">
+                    <div className="intro_container4_contents">
                         <div className="c4_text">
                             <div className="c4_headline">
                                 FEATURES
@@ -373,8 +373,8 @@ function Concept () {
                         </div>
                     </div>
                 </div>
-                <div className="concept_container4">
-                    <div className="concept_container4_contents">
+                <div className="intro_container4">
+                    <div className="intro_container4_contents">
                         <div className="c4_text">
                             <div className="c4_headline">
                                 THE TEAM
@@ -405,8 +405,8 @@ function Concept () {
                         </div>
                     </div>
                 </div>
-                <div className="concept_container4">
-                    <div className="concept_container4_contents">
+                <div className="intro_container4">
+                    <div className="intro_container4_contents">
                         <div className="c4_text">
                             <div className="c4_headline">
                                 AVAILABLE POSITIONS
@@ -455,10 +455,10 @@ function Concept () {
                         </div>
                     </div>
                 </div>
-            </ConceptStyle>
+            </IntroStyle>
 
         </>
     )
 }
 
-export default Concept;
+export default Intro;
