@@ -54,9 +54,9 @@ const RoadmapStyle = styled.div`
   }
 
   .phase_head {
-    font-family: 'Rock Salt', cursive;
+    font-family: 'East Sea Dokdo', cursive;
     text-align: center;
-    /* font-size: 4vw; */
+    font-size: 6vw;
   }
 
   .coming_soon {
@@ -77,8 +77,8 @@ const RoadmapStyle = styled.div`
   }
 
   .concept_head {
-    font-family: 'Walter Turncoat', cursive;
-    font-size: 2vw;
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 6vw;
     padding-right: 4vw;
     text-align: center;
   }
@@ -89,7 +89,7 @@ const RoadmapStyle = styled.div`
 
   .phase_concept {
     display: flex;
-    padding: 6vw 8vw 1vw 8vw;
+    padding: 4vw 8vw 4vw 8vw;
     font-size: 2vw;
     line-height: 1.4;
     justify-content: center;
@@ -104,9 +104,9 @@ const RoadmapStyle = styled.div`
   .item_list {
     /* background-color: darkgoldenrod; */
     font-family: 'Walter Turncoat', cursive;
-    font-size: 2.4vw;
+    font-size: 3vw;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .idea_item {
@@ -117,7 +117,7 @@ const RoadmapStyle = styled.div`
   }
 
   .slide_next {
-    font-family: 'Walter Turncoat', cursive;
+    font-family: 'East Sea Dokdo', cursive;
     font-size: 4vw;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -126,7 +126,7 @@ const RoadmapStyle = styled.div`
   /* 반응형 */
   @media (max-width: 768px) {
     .phase_head {
-      font-size: 4vw;
+      font-size: 40px;
     }
     .phase_headline {
       font-size: 3vw;
@@ -136,7 +136,7 @@ const RoadmapStyle = styled.div`
       display: block;
     }
     .concept_head {
-      font-size: 2.8vw;
+      font-size: 6vw;
       padding-left: 0px;
     }
     .idea_item{
@@ -183,37 +183,31 @@ function Roadmap() {
           <Slider {...settings} className="roadmap_slider">
             <div className="phase_0">
               <h1 className="phase_head">Phase 0.<br /> Pirates DAO Launching</h1>
-              <div className="phase_headline">
-                페이즈 0는 Klaytn 기반 탈중앙화 커뮤니티,<br /> 'Pirates Dao'의 런칭입니다. 
-              </div>
               <div className="phase_concept">
                 <div className="concept_head">'Pirates DAO'</div>
                 <div className="concept_body">
                   <span>Pirates DAO는 Klaytn 기반 <b>'탈중앙화 커뮤니티'</b>입니다.<br /></span>
-                  <span>프로필 nft를 가진 누구나 컨텐츠를 생산할 수 있습니다.<br /></span>
-                  <span>컨텐츠로 발생한 수익은 <b>생산자가 가져가는</b> 구조입니다.</span>
+                  <span>프로필 NFT를 가진 누구나 컨텐츠를 생산할 수 있으며,<br /></span>
+                  <span>컨텐츠로 발생한 수익은 <b>생산자에게 보상으로 지급됩니다.</b></span>
                 </div>
               </div>
               <div className="phase_item">
                 <ul className="item_list">
-                  This Phase main concept.
+                  Features
                   <li className="idea_item">'병에 든 쪽지'</li>
                   <li className="idea_item">'수배서'</li>
-                  <li className="slide_next">Slide next Phase ➸</li>
+                  <li className="slide_next">Slide next Phase</li>
                 </ul>
               </div>
             </div>
             <div className="phase_1">
               <h1 className="phase_head">Phase 1.<br /> Tavern & Sea Map</h1>
-              <div className="phase_headline">
-                페이즈 1에선 nft로 할 수 있는 각종 기능들을 출시합니다. <br />그중 선술집(Tavern)' 과 '해도(Sea Map)'가 핵심 컨텐츠입니다.
-              </div>
               <div className="phase_item">
                 <ul className="item_list">
-                  This Phase main concept.
+                  Features
                   <li className="idea_item">'선술집(TAVERN)'</li>
                   <li className="idea_item">'해도(Sea Map)'</li>
-                  <li className="slide_next">Slide to next Phase ➸</li>
+                  <li className="slide_next">Slide to next Phase</li>
                 </ul>
               </div>
             </div>
