@@ -1,5 +1,5 @@
 import React from 'react';
-import vault from '../../assets/img/Vault/vault_background.png';
+import vault from '../../assets/img/Vault/Vault.png';
 import styled from 'styled-components';
 import TemporaryDrawer from './Drawer';
 

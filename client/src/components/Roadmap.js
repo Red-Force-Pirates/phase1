@@ -103,8 +103,8 @@ const RoadmapStyle = styled.div`
 
   .item_list {
     /* background-color: darkgoldenrod; */
-    font-family: 'Walter Turncoat', cursive;
-    font-size: 3vw;
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 4vw;
     text-align: center;
     padding-top: 20px;
   }
