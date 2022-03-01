@@ -248,7 +248,7 @@ function Intro () {
         <>
             <IntroStyle>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
                 <div className="intro_container1">
                     <div className="container1_intro">
@@ -260,7 +260,6 @@ function Intro () {
                                     10000개의 대체 불가능한 토큰입니다.<br />
                                     각각의 고양이들은 200여개의 독특한 파트들로 구성되어<br />
                                     세상에 오직 하나만 존재하는 특별한 수집품입니다.<br />
-                                    <div className="blank"></div>
                                     또한 www.piratesdao.org에서 프로필로 사용할 수 있으며<br />
                                     앞으로 추가될 소셜네트워크, 캘린더, 시즌 랭킹 시스템,<br />
                                     디파이, 게임 등의 기능들을 사용할 수 있습니다.<br />
