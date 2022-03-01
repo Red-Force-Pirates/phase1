@@ -8,14 +8,15 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Main/>}/>
-        <Route exact path="/roadmap" element={<Roadmap/>}/>
-        <Route exact path="/intro" element={<Intro/>}/>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/logout" element={<Logout />}/>
-        <Route path="/register" element={<Register />}/>
-        <Route path="/crew" element={<Crew />}/>
-        <Route path="/vault" element={<Vault />}/>
+        <Route exact path="/" element={<Main/>}>
+          <Route exact path="/roadmap" element={<Roadmap/>}/>
+          <Route exact path="/intro" element={<Intro/>}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/logout" element={<Logout />}/>
+          <Route path="/register" element={<Register />}/>
+          <Route path="/crew" element={<Crew />}/>
+          <Route path="/vault" element={<Vault />}/>
+        </Route>
       </Routes>
       
       <Tavern />
