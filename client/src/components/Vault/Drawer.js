@@ -97,8 +97,8 @@ export default function TemporaryDrawer() {
 
   return (
     <div className="contentBox">
-        <span className="mainText" onClick={toggleDrawer("right", true)}>VAULT TREASURY</span><br />
-        <span className="mainVault" onClick={toggleDrawer("right", true)}>$871,239,120</span>
+        <div className="mainText" onClick={toggleDrawer("right", true)}>VAULT TREASURY</div>
+        <div className="mainVault" onClick={toggleDrawer("right", true)}>$871,239,120</div>
         <Drawer
           anchor={"right"}
           open={state["right"]}

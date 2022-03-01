@@ -1,5 +1,5 @@
 import React from 'react';
-import vault from '../../assets/img/Vault/vault_background.png';
+import vault from '../../assets/img/Vault/Vault.png';
 import styled from 'styled-components';
 import TemporaryDrawer from './Drawer';
 
@@ -9,71 +9,100 @@ const VaultStyle = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 600px;
+    height: 700px;
     position: relative;
     background-color: black;
+
   }
 
   .mainContent {
-    width: 80%;
+    width: 100%;
     height: 100%;
     background-image: url(${vault});
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    justify-content: start;
   }
 
   .contentBox {
-    position: absolute;  
-    width: 80%;
-    height: 60%;
-    top: 15%;
-    /* background-color: blue; */
-  }
-
-  .mainText:hover {
-    color: black;
-    font-size: 5rem;
-  }
-
-  .mainTextBox {
-    position: relative;
-    width: 100%;
-    height: 30%;
-    top: 10%;
-    left: 10%;
-    cursor: pointer;
+    /* height: auto; */
+    margin: auto;
+    /* margin-left: 10%; */
+    /* margin-top: 5%; */
     /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentBox:hover {
+    .mainText{
+    color: gold;
+    }
+    .mainVault {
+      color: gold;
+    }
   }
 
   .mainText {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     color: white;
-    font-size: 4.5rem;
+    font-size: 120px;
     font-weight: bold;
     cursor: pointer;
-    /* background-color: red; */
-  }
-  
-  .mainVaultBox {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    top: 33%;
-    left: 10%;
-    cursor: pointer;
+    font-family: 'Anton',sans-serif;
     /* background-color: red; */
   }
 
   .mainVault {
-      margin-left: 10%;
+      /* margin-left: 10%; */
       color: white;
-      font-size: 8.5rem;
+      font-size: 180px;
       font-weight: bold;
       cursor: pointer;
+      font-family: 'Anton',sans-serif;
       /* background-color: blue; */
   }
 
-  .mainVault:hover {
-    color: black;
-    font-size: 9rem;
+  @media (max-width: 1170px) {
+    .mainText {
+    font-size: 75px;
+    margin-bottom: 1%;
+    }
+    .mainVault {
+        font-size: 100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mainText {
+    font-size: 60px;
+    margin-bottom: 3%;
+    }
+    .mainVault {
+        font-size: 60px;
+    }
+  }
+
+  @media (max-width: 660px) {
+    .mainText {
+    font-size: 40px;
+    margin-bottom: 3%;
+    }
+    .mainVault {
+        font-size: 40px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .mainText {
+    font-size: 20px;
+    margin-bottom: 3%;
+    }
+    .mainVault {
+        font-size: 20px;
+    }
   }
 `
 
@@ -83,13 +112,12 @@ export default function Vault() {
             <VaultStyle >
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=East+Sea+Dokdo&family=Gothic+A1&family=Gowun+Batang&family=Nanum+Brush+Script&family=Roboto:wght@900&family=Rock+Salt&family=Walter+Turncoat&display=swap" rel="stylesheet" />
                 <div className="container">
-                    <div className="mainContent">
-                      <TemporaryDrawer />
-                    </div>
+                      <div className="mainContent">
+                        <TemporaryDrawer />
+                      </div>
                 </div>
-            
             </VaultStyle>
         </>
     )
