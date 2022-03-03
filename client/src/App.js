@@ -1,7 +1,7 @@
 import "./assets/css/App.css";
 import { Routes, Route } from 'react-router-dom';
 import { Main, Login, Logout, Register, Roadmap, Crew, Intro } from './components/export';
-import Tavern from './components/route_tavern';
+import Tavern from './components/route_tavern 2';
 import Vault from './components/Vault/Vault';
 
 function App() {

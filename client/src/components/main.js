@@ -37,6 +37,9 @@ const MainStory = styled.div`
 
 
 function Home() {
+
+  window.klaytn.enable();
+
   return (
     <>
       <MainStory >
