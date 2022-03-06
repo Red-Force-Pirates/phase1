@@ -38,6 +38,7 @@ const MainStory = styled.div`
 
 function Home() {
 
+  // 월렛 로그인(wallet)
   window.klaytn.enable();
 
   return (
